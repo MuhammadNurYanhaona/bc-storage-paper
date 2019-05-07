@@ -1,0 +1,84 @@
+\documentclass[conference]{IEEEtran}
+
+\IEEEoverridecommandlockouts
+% The preceding line is only needed to identify funding in the first footnote. If that is unneeded, please comment it out.
+
+\usepackage{cite, url}
+% Enable the following line if you want highlighted hyperlink to citation and references
+%\usepackage{hyperref}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+
+\usepackage{cases}
+\usepackage{amsthm}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{corollary}{Corollary}[theorem]
+\newtheorem{lemma}[theorem]{Lemma}
+
+% for code import
+\usepackage{listings}
+\usepackage{alltt}
+\usepackage[utf8]{inputenc}
+\usepackage{fancyvrb}
+\usepackage{array}
+\usepackage{colortbl}
+\usepackage{ctable}
+\usepackage{url}
+\usepackage{booktabs}
+\usepackage{multirow}
+\usepackage{setspace}
+
+
+\def\BibTeX{{\rm B\kern-.05em{\sc i\kern-.025em b}\kern-.08em
+    T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
+\begin{document}
+
+\title{Integrity Management and Access Control of External Storages using Blockchain Technology 
+	\thanks{This research is funded by KONA Software Lab, Limited.}
+}
+
+\author{
+	\IEEEauthorblockN{Hasan Mohammad Shahriar}
+	\IEEEauthorblockA{\textit{Research and Development} \\
+	\textit{Kona Software Lab}\\
+		Dhaka, Bangladesh \\
+		h.m.shahriar@konasl.com}
+	\and
+	\IEEEauthorblockN{Muhammad Nur Yanhaona}
+	\IEEEauthorblockA{\textit{Research and Development} \\
+	\textit{Kona Software Lab}\\
+		Dhaka, Bangladesh \\
+		nur.yanhaona@konasl.com}
+}
+\maketitle
+
+\begin{abstract}
+\end{abstract}
+
+\begin{IEEEkeywords}
+peer-to-peer computing, distributed information systems, document handling  
+\end{IEEEkeywords}
+
+\section{Introduction}
+\label{s-intro}
+Since its inception in 2008 \cite{bitcoin}, the blockchain technology has gained widespread attention as a transformative technology that can revolutionize many industries \cite{deloitte}. Blockchain based digital currencies such as Bitcoin \cite{bitcoin}, Ether \cite{Wood2014EthereumAS}, and Ripple XRP \cite{David2014TheRP} are considered by many viable alternatives to existing currencies for trade and commerce for their security and ease of transfer. Blockchain smart contracts \cite{FM548, Wood2014EthereumAS}, on the other hand, have spawned innovative applications in business and financial sectors due to their capacity of encoding the rules of interaction and ensuring their enforcement.
+
+Central to the appeal of blockchain technology is its maintenance of a distributed ledger of transactions --  called the blockchain -- in a peer-to-peer network of autonomous and anonymous entities. In a blockchain network, all entities are even and none of them is trusted; still, the security and integrity of the transaction ledger can be guaranteed. This feat is achieved by a complete replication of all information in all network participants where each participant validate and execute every transaction. As long as the majority of the network participants are honest, the outcome of the transactions, i.e., the state of the blockchain ledger can be trusted.
+
+The blockchain technology's decentralization of trust through information and processing replication in a scalable peer-to-peer network is leading innovations and renovations in many application domains where trust and information security are key concerns. However, problem in one area in particular appears to be a major obstacle for blockchain application innovations. This is the problem of document storage. 
+
+The blockchain technology is inherently unsuitable for storing bulky information such as files and media contents due to the networking and storage cost associated with their management. Peculiarities of blockchain ledger maintenance such as \textit{blockchain reorg} \cite{reorg} further complicates the situation by making direct integration of existing trusted storage solutions with a blockchain network difficult. Finally, public blockchain technologies find the long term preservation and integrity insurance requirement for trustworthy document storage in conflict with their blockchain transaction ledger maintenance incentive where participants are only being paid for extending the ledger of transactions\footnote{by mining transactions into new blocks} and they can join or leave the network arbitrarily.      
+
+
+
+     
+ 
+\bibliographystyle{plain}
+\bibliography{references.bib}
+
+\end{document}

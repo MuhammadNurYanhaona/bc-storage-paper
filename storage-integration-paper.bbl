@@ -1,0 +1,34 @@
+\begin{thebibliography}{1}
+
+\bibitem{deloitte}
+Break through with blockchain.
+\newblock
+  \url{https://www2.deloitte.com/us/en/pages/financial-services/articles/blockchain-series-deloitte-center-for-financial-services.html}.
+\newblock Accessed: 2019-05-06.
+
+\bibitem{reorg}
+Chain reorganization.
+\newblock \url{https://en.bitcoin.it/wiki/Chain_Reorganization}.
+\newblock Accessed: 2019-02-12.
+
+\bibitem{David2014TheRP}
+D.~Stalin David.
+\newblock The ripple protocol consensus algorithm.
+\newblock 2014.
+
+\bibitem{bitcoin}
+Satoshi Nakamoto.
+\newblock Bitcoin: A peer-to-peer electronic cash system.
+\newblock {\em Cryptography Mailing list at https://metzdowd.com}, 03 2009.
+
+\bibitem{FM548}
+Nick Szabo.
+\newblock Formalizing and securing relationships on public networks.
+\newblock {\em First Monday}, 2(9), 1997.
+
+\bibitem{Wood2014EthereumAS}
+D.~Wood.
+\newblock Ethereum: a secure decentralised generalised transaction ledger.
+\newblock 2014.
+
+\end{thebibliography}
