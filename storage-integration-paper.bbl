@@ -1,4 +1,4 @@
-\begin{thebibliography}{1}
+\begin{thebibliography}{10}
 
 \bibitem{deloitte}
 Break through with blockchain.
@@ -11,20 +11,72 @@ Chain reorganization.
 \newblock \url{https://en.bitcoin.it/wiki/Chain_Reorganization}.
 \newblock Accessed: 2019-02-12.
 
+\bibitem{googleCloud}
+Google cloud storage: Features and benefits.
+\newblock \url{https://cloud.google.com/storage/features/}.
+\newblock Accessed: 2019-05-15.
+
+\bibitem{ipfs}
+Juan Benet.
+\newblock Ipfs - content addressed, versioned, p2p file system, 07 2014.
+
 \bibitem{David2014TheRP}
 D.~Stalin David.
 \newblock The ripple protocol consensus algorithm.
 \newblock 2014.
+
+\bibitem{10.1007/978-3-540-45172-3_4}
+Michael~J. Freedman and David Mazi{\'e}res.
+\newblock Sloppy hashing and self-organizing clusters.
+\newblock In M.~Frans Kaashoek and Ion Stoica, editors, {\em Peer-to-Peer
+  Systems II}, pages 45--55, Berlin, Heidelberg, 2003. Springer Berlin
+  Heidelberg.
+
+\bibitem{filecoin}
+Protocol Labs.
+\newblock Filecoin: A decentralized storage network.
+\newblock \url{https://filecoin.io/filecoin.pdf}, 2017.
+
+\bibitem{Maymounkov:2002:KPI:646334.687801}
+Petar Maymounkov and David Mazi\`{e}res.
+\newblock Kademlia: A peer-to-peer information system based on the xor metric.
+\newblock In {\em Revised Papers from the First International Workshop on
+  Peer-to-Peer Systems}, IPTPS '01, pages 53--65, London, UK, UK, 2002.
+  Springer-Verlag.
+
+\bibitem{Murty:2008:PAW:1407893}
+James Murty.
+\newblock {\em Programming Amazon Web Services}.
+\newblock O'Reilly, first edition, 2008.
 
 \bibitem{bitcoin}
 Satoshi Nakamoto.
 \newblock Bitcoin: A peer-to-peer electronic cash system.
 \newblock {\em Cryptography Mailing list at https://metzdowd.com}, 03 2009.
 
+\bibitem{Pouwelse:2005:BPF:2138958.2138984}
+Johan Pouwelse, Pawe\l Garbacki, Dick Epema, and Henk Sips.
+\newblock The bittorrent p2p file-sharing system: Measurements and analysis.
+\newblock In {\em Proceedings of the 4th International Conference on
+  Peer-to-Peer Systems}, IPTPS'05, pages 205--216, Berlin, Heidelberg, 2005.
+  Springer-Verlag.
+
 \bibitem{FM548}
 Nick Szabo.
 \newblock Formalizing and securing relationships on public networks.
 \newblock {\em First Monday}, 2(9), 1997.
+
+\bibitem{swarm}
+viktor trón, aron fischer, dániel a.~nagy, zsolt felföldi, and nick johnson.
+\newblock swap, swear and swindle incentive system for swarm.
+\newblock
+  \url{https://swarm-gateways.net/bzz:/theswarm.eth/ethersphere/orange-papers/1},
+  May 2016.
+
+\bibitem{Wilkinson14storja}
+Shawn Wilkinson, Tome Boshevski, Josh Brandoff, and Vitalik Buterin.
+\newblock Storj a peer-to-peer cloud storage network.
+\newblock \url{https://storj.io/storj2014.pdf}, 2014.
 
 \bibitem{Wood2014EthereumAS}
 D.~Wood.
