@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.1.24)  21 MAY 2019 10:44
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.1.24)  24 MAY 2019 15:55
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1002,15 +1002,16 @@ e
 ))
 \c@lstlisting=\count139
 
-Underfull \hbox (badness 3260) in paragraph at lines 74--75
+(./intro.tex
+Underfull \hbox (badness 3260) in paragraph at lines 7--8
 []\OT1/ptm/m/n/10 The blockchain tech-nol-ogy's de-cen-tral-iza-tion of trust
  []
 
-LaTeX Font Info:    Try loading font information for U+msa on input line 76.
+LaTeX Font Info:    Try loading font information for U+msa on input line 9.
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 76.
+LaTeX Font Info:    Try loading font information for U+msb on input line 9.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
@@ -1027,7 +1028,7 @@ d-to.pdf>
 (epstopdf)                    size: 8593 bytes
 (epstopdf)             Command: <repstopdf --outfile=./figures/system-architect
 ure-eps-converted-to.pdf ./figures/system-architecture.eps>
-(epstopdf)             \includegraphics on input line 92.
+(epstopdf)             \includegraphics on input line 25.
 Package epstopdf Info: Output file is already uptodate.
 <./figures/system-architecture-eps-converted-to.pdf, id=10, pagebox=cropbox, 69
 6.6025pt x 332.24126pt>
@@ -1035,14 +1036,15 @@ File: ./figures/system-architecture-eps-converted-to.pdf Graphic file (type pdf
 )
 <use ./figures/system-architecture-eps-converted-to.pdf>
 Package pdftex.def Info: ./figures/system-architecture-eps-converted-to.pdf  us
-ed on input line 92. on input line 92.
+ed on input line 25. on input line 25.
 Package pdftex.def Info: Requested size: 247.6778pt x 118.12643pt on input line
- 92.
+ 25.
 
-Underfull \hbox (badness 4595) in paragraph at lines 100--101
+Underfull \hbox (badness 4595) in paragraph at lines 33--34
 []\OT1/ptm/m/n/10 A generic doc-u-ment ac-cess con-trol con-fig-u-ra-tion
  []
 
+) [2 <./figures/system-architecture-eps-converted-to.pdf>]
 (./storage-integration-paper.bbl
 Underfull \hbox (badness 10000) in paragraph at lines 4--8
 []\OT1/ptm/m/n/8 Break through with blockchain.  $https : / / www2 .
@@ -1055,13 +1057,13 @@ les /
  []
 
 
-Underfull \hbox (badness 6252) in paragraph at lines 70--75
+Underfull \hbox (badness 6252) in paragraph at lines 82--87
 []\OT1/ptm/m/n/8 viktor tr[]on, aron fis-cher, d[]aniel a. nagy, zsolt felf[]ol
 di, and
  []
 
 
-Underfull \hbox (badness 7907) in paragraph at lines 70--75
+Underfull \hbox (badness 7907) in paragraph at lines 82--87
 \OT1/ptm/m/n/8 nick john-son.  swap, swear and swin-dle in-cen-tive sys-tem
  []
 
@@ -1077,25 +1079,24 @@ Before submitting the final camera ready copy, remember to:
  uses only Type 1 fonts and that every step in the generation
  process uses the appropriate paper size.
 
-[2 <./figures/system-architecture-eps-converted-to.pdf>]
-(./storage-integration-paper.aux) ) 
+[3] (./storage-integration-paper.aux) ) 
 Here is how much of TeX's memory you used:
- 8160 strings out of 492990
- 114331 string characters out of 6135005
- 200046 words of memory out of 5000000
- 11527 multiletter control sequences out of 15000+600000
+ 8171 strings out of 492990
+ 114443 string characters out of 6135005
+ 200109 words of memory out of 5000000
+ 11535 multiletter control sequences out of 15000+600000
  41605 words of font info for 86 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 41i,8n,53p,995b,305s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texlive/texmf-dist/fonts/enc/dvi
-ps/base/8r.enc}</usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb>
-</usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/share/te
-xlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dis
-t/fonts/type1/urw/times/utmri8a.pfb>
-Output written on storage-integration-paper.pdf (2 pages, 67363 bytes).
+ 41i,8n,53p,1013b,305s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/share/texlive/texmf-dist/fonts/enc
+/dvips/base/8r.enc}</usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.
+pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/shar
+e/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf
+-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on storage-integration-paper.pdf (3 pages, 73225 bytes).
 PDF statistics:
- 34 PDF objects out of 1000 (max. 8388607)
- 23 compressed objects within 1 object stream
+ 37 PDF objects out of 1000 (max. 8388607)
+ 25 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  6 words of extra memory for PDF output out of 10000 (max. 10000000)
 

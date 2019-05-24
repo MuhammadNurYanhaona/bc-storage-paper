@@ -16,6 +16,11 @@ Google cloud storage: Features and benefits.
 \newblock \url{https://cloud.google.com/storage/features/}.
 \newblock Accessed: 2019-05-15.
 
+\bibitem{stampIO}
+Seamless blockchain certification now even easier.
+\newblock \url{https://stamp.io/}.
+\newblock Accessed: 2019-05-24.
+
 \bibitem{ipfs}
 Juan Benet.
 \newblock Ipfs - content addressed, versioned, p2p file system, 07 2014.
@@ -53,6 +58,13 @@ James Murty.
 Satoshi Nakamoto.
 \newblock Bitcoin: A peer-to-peer electronic cash system.
 \newblock {\em Cryptography Mailing list at https://metzdowd.com}, 03 2009.
+
+\bibitem{10.1007/978-3-319-56614-6_22}
+Rafael Pass, Lior Seeman, and Abhi Shelat.
+\newblock Analysis of the blockchain protocol in asynchronous networks.
+\newblock In Jean-S{\'e}bastien Coron and Jesper~Buus Nielsen, editors, {\em
+  Advances in Cryptology -- EUROCRYPT 2017}, pages 643--673, Cham, 2017.
+  Springer International Publishing.
 
 \bibitem{Pouwelse:2005:BPF:2138958.2138984}
 Johan Pouwelse, Pawe\l Garbacki, Dick Epema, and Henk Sips.

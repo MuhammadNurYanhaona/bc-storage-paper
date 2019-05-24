@@ -6,47 +6,48 @@ Database file #1: references.bib.bib
 Warning--to sort, need author or key in deloitte
 Warning--to sort, need author or key in reorg
 Warning--to sort, need author or key in googleCloud
+Warning--to sort, need author or key in stampIO
 Warning--empty booktitle in David2014TheRP
 Warning--empty booktitle in Wood2014EthereumAS
-You've used 15 entries,
+You've used 17 entries,
             2118 wiz_defined-function locations,
-            585 strings with 6370 characters,
-and the built_in function-call counts, 4108 in all, are:
-= -- 400
-> -- 160
-< -- 3
-+ -- 67
-- -- 50
-* -- 213
-:= -- 654
-add.period$ -- 47
-call.type$ -- 15
-change.case$ -- 69
+            598 strings with 6745 characters,
+and the built_in function-call counts, 4813 in all, are:
+= -- 473
+> -- 187
+< -- 4
++ -- 77
+- -- 58
+* -- 254
+:= -- 754
+add.period$ -- 54
+call.type$ -- 17
+change.case$ -- 78
 chr.to.int$ -- 0
-cite$ -- 20
-duplicate$ -- 172
-empty$ -- 379
-format.name$ -- 50
-if$ -- 906
+cite$ -- 23
+duplicate$ -- 202
+empty$ -- 442
+format.name$ -- 58
+if$ -- 1070
 int.to.chr$ -- 0
-int.to.str$ -- 15
-missing$ -- 9
-newline$ -- 77
-num.names$ -- 26
-pop$ -- 120
+int.to.str$ -- 17
+missing$ -- 10
+newline$ -- 87
+num.names$ -- 30
+pop$ -- 138
 preamble$ -- 1
-purify$ -- 54
+purify$ -- 61
 quote$ -- 0
-skip$ -- 131
+skip$ -- 155
 stack$ -- 0
-substring$ -- 157
-swap$ -- 38
-text.length$ -- 3
+substring$ -- 199
+swap$ -- 49
+text.length$ -- 4
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 58
-warning$ -- 5
-while$ -- 34
-width$ -- 17
-write$ -- 158
-(There were 5 warnings)
+type$ -- 66
+warning$ -- 6
+while$ -- 40
+width$ -- 19
+write$ -- 180
+(There were 6 warnings)
