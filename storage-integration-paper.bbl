@@ -25,10 +25,19 @@ Seamless blockchain certification now even easier.
 Juan Benet.
 \newblock Ipfs - content addressed, versioned, p2p file system, 07 2014.
 
+\bibitem{Daemen99aesproposal:}
+Joan Daemen and Vincent Rijmen.
+\newblock Aes proposal: Rijndael, 1999.
+
 \bibitem{David2014TheRP}
 D.~Stalin David.
 \newblock The ripple protocol consensus algorithm.
 \newblock 2014.
+
+\bibitem{1455525}
+W.~{Diffie} and M.~E. {Hellman}.
+\newblock Privacy and authentication: An introduction to cryptography.
+\newblock {\em Proceedings of the IEEE}, 67(3):397--427, March 1979.
 
 \bibitem{10.1007/978-3-540-45172-3_4}
 Michael~J. Freedman and David Mazi{\'e}res.

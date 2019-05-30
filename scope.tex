@@ -1,0 +1,22 @@
+\section{The Scope of the Storage Integration Problem}
+\label{s-scope}
+To discuss the scope of the external storage integration problem, readers first need to understand our vision of responsibility breakdown for blockchain powered applications requiring document storage. For this latter discussion we refer to the model of Figure \ref{fig-1}.
+
+We envision that the application logic of a blockchain powered application (subsequently referred as a \textit{Blockchain Application}) will be stored in the blockchain network in the form of blockchain smart contracts. Information update, payment processing, and any auditing initiated by users' access to the blockchain application will be governed by those smart contracts and reflected as transactions in the blockchain ledger. If we categorize aspects of users' interaction with a blockchain application into \textit{4--As}: \textit{Authentication} of user, \textit{Authorization} of request, \textit{Access} to information, and \textit{Audit} of change; all \textit{4-As} are handled by the blockchain network -- except for the case of access/updating documents such as files and images.
+
+Such documents will reside on one or more external document storage systems. At present, there is no convincing solution for reliable interaction of a blockchain network with an external information system in the literature. Hence \textit{4-As} related to document access/update cannot be handled by the blockchain network as being done for other user interactions. A feasible alternative is that a user's blockchain identity and information in the blockchain ledger set the rules for the user's access to the external storage systems. Then a gateway service interacting with both the blockchain network and the storage systems enforces the \textit{4-As} on behalf of the blockchain network.
+
+To elaborate, a user will identify him/herself with the gateway with his/her blockchain identity and request upload/download of a document in an external storage as additional information associated with some blockchain smart contract. The gateway will check if the blockchain ledger contains permission information that support authorization of the user's request. Then the user and the gateway undergo an access authorization protocol that results in several blockchain transactions for auditing and payment processing. If authorization is successful, the gateway creates a restricted session with the external storage that the user uses to upload/download documents to/from the external storage.
+
+The aforementioned breakdown of responsibilities for external storage access limits the scope of the storage integration problem to two primary activities: 
+
+\begin{enumerate}
+\item development of a storage access permission control mechanism that exclusively uses blockchain information, and
+\item designing secure, reliable, and accountable protocols for paid or free document upload/download with external storages. 
+\end{enumerate}          
+
+Note that although we accept the blockchain network as the veritable source of information for both activities, the storage integration gateway needs to consider that any transaction in the blockchain can be reversed due to blockchain ledger reorganization \cite{reorg}. Consequently, all access control decisions must be made based on the latest state of the blockchain ledger and the upload/download protocols should support rollback and resume. Doing this elegantly is a major design concern for the gateway.
+
+Involvement of the blockchain network in document upload and download with external storages provides a natural mechanism for document integrity checking. During a document upload, a short and unique document signature can be generated from the document content\footnote{for example, a hash of the document byte stream can be the document signature} and stored in the associated blockchain smart contract. During a download, the client application can recompute the signature from the downloaded content and match that with the signature found in the blockchain smart contract. If the two signatures do not match then the document has been modified or corrupted outside the guidance of the blockchain network and the client rejects the document. This simple scheme of using blockchain ledger's immutability to ensure document integrity has been used by others also \cite{stampIO}.  
+
+Subsequent sections chronologically describes the upload and download protocols, the permission control mechanism, and the gateway design.

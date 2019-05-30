@@ -1,0 +1,82 @@
+Single Document Related Information Location:
+
+	1. Blockchain smart contract
+		a. Document key
+		b. Document name
+		c. Document size information
+		d. Document price 
+		e. Document upload time
+	2. Access control system
+		a. Document Key to storage location mapping
+		b. Document access priviledges
+		c. Document hash
+		d. Project related bucket configuration
+	3. Storage server
+		a. Document
+		b. Bucket
+		
+
+Flow of document download process
+	1. User view document name and download cost
+	2. User will request download authorization
+
+
+	For Access controller:
+		1. accountability
+			Actions traceable in the blockchain
+		2. protection from external storage system failure
+			Payment is done only after all interactions with the external storage are complete
+		3. guaranteed payment
+			Users can neither fool it to do unnecessary work nor withheld payment after work is complete 
+		4. minimization of state management
+			Most of the state information remains in the blockchain and failure cases and chain reorganization
+			can be dealt with efficient
+		5. protection from the mining network maliciousness
+			Payment is always designated for access controller address 
+
+	For User:
+		1. Security protection
+			User must be able to to get refunds if he/she does not get the proper service. None else
+			can interrupt or sniff on the storage session intended for the user 
+		2. payment enforcement
+			User must pay before he/she gained access to the external storage and his/her access can be
+			properly restrained or monitored
+		3. protection from the mining network maliciousness
+			External storage related information cannot be derived from blockchain data
+	
+
+	User 				Smart Contract 			Access Control 			Cloud storage
+	Retrieve document Key K ----------->
+	Retrieve access control address ACaddr ---------------------------->
+
+	****** if payment is enabled
+	Deposite security charge K, C, ACaddr -->
+	Generate shared key Dk
+	Request authorization K, Uaddr, Dk -------------------------------->
+									Retrieve session key S -------------> 
+					<-------------------------------- Issue token T, lock C 
+			<------------------------------------------------ Send notification 
+	Derieve session key K, Uaddr, payment (P-C) -->
+	T <----------------------------	T, P ---------------------------> P
+	******
+
+	Decrypt T to get S
+	Retrieve document S -------------------------------------------------------------------------------->
+
+
+	T = Enc (S, Dk)
+
+	User gets a conversation identifier C from the Access Controller
+	User makes the security deposit	D
+	User requests authorization for access to Access Controller
+	Access Controller retrieves session key S
+	Access Controller encrypts S with key = Enc(K, C) [here K is access controller key]
+	Access Controller notifies the user 				
+	User deposits the rest of the payment using C
+	Access Controller locks the payment and returns user Enc(K, C)
+	User releases the payment using the key and gets the session key S in the process
+	-- the session key S should not remain in the smart contract in an un-encrypted form
+	   nor should it be revealed as the return of a function call.			
+
+
+* Need to add project identifier in smart contract which will map bucket in storage server.
