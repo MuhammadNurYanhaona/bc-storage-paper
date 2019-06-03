@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.1.24)  31 MAY 2019 16:56
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.1.24)  3 JUN 2019 12:06
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1337,7 +1337,7 @@ Underfull \hbox (badness 4595) in paragraph at lines 33--34
 \pgf@layerboxsaved@umlsd@background=\box73
 \pgf@layerbox@umlsd@threadlayer=\box74
 \pgf@layerboxsaved@umlsd@threadlayer=\box75
- [4] [5] (./storage-integration-paper.bbl
+ [4] [5] [6] (./storage-integration-paper.bbl
 Underfull \hbox (badness 10000) in paragraph at lines 4--8
 []\OT1/ptm/m/n/8 Break through with blockchain.  $https : / / www2 .
  []
@@ -1348,7 +1348,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 4--8
 les /
  []
 
-[6]
+
 Underfull \hbox (badness 6252) in paragraph at lines 91--96
 []\OT1/ptm/m/n/8 viktor tr[]on, aron fis-cher, d[]aniel a. nagy, zsolt felf[]ol
 di, and
@@ -1373,29 +1373,26 @@ Before submitting the final camera ready copy, remember to:
 
 [7
 
-] (./storage-integration-paper.aux)
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
- ) 
+] (./storage-integration-paper.aux) ) 
 Here is how much of TeX's memory you used:
- 16928 strings out of 492990
- 322290 string characters out of 6135005
- 415287 words of memory out of 5000000
- 20083 multiletter control sequences out of 15000+600000
+ 16931 strings out of 492990
+ 322342 string characters out of 6135005
+ 414286 words of memory out of 5000000
+ 20086 multiletter control sequences out of 15000+600000
  41605 words of font info for 86 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  55i,10n,80p,1192b,1007s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texliv
-e/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texm
-f-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/
-fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/t
-ype1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/pub
-lic/amsfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/
-utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></u
-sr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texliv
-e/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on storage-integration-paper.pdf (7 pages, 146990 bytes).
+{/usr/share/texlive/texmf-dist/fonts/enc/d
+vips/base/8r.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/
+cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.
+pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></u
+sr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share
+/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texliv
+e/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fo
+nts/type1/urw/times/utmbi8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/
+times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.p
+fb>
+Output written on storage-integration-paper.pdf (7 pages, 149275 bytes).
 PDF statistics:
  98 PDF objects out of 1000 (max. 8388607)
  61 compressed objects within 1 object stream
