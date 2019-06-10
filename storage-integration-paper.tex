@@ -21,7 +21,7 @@
 \newtheorem{corollary}{Corollary}[theorem]
 \newtheorem{lemma}[theorem]{Lemma}
 
-% for sequence diagrams
+% for sequence diagrams and trees
 \usepackage{tikz}
 \usepackage{pgf-umlsd}
 \usepgflibrary{arrows} % for pgf-umlsd
@@ -29,9 +29,10 @@
 \usepackage{float}
 \usepackage[export]{adjustbox}
 \usepackage{multicol, blindtext}
+\usetikzlibrary{trees}
 
-
-
+\usepackage{chngcntr}
+\counterwithin{figure}{section}
 
 \def\BibTeX{{\rm B\kern-.05em{\sc i\kern-.025em b}\kern-.08em
     T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
@@ -68,254 +69,32 @@ peer-to-peer computing, distributed information systems, document handling
 
 \input{scope.tex}
 
-\section{Document Upload and Download Protocols}
-\label{s-updown}
-For the discussion of this section, we ignore the access permission and blockchain ledger reorganization related concerns. Subsequent sections address those issues. In addition, we assume that both document upload and download with the external storage involves blockchain payments. Protocols without payment can be easily derived from the described protocols by eliminating the steps related to payments. Finally, both protocols heavily use symmetric key cryptography in various steps for information and payment security. We refer the uninitiated readers to \cite{1455525} for a basic introduction to cryptography and to \cite{Daemen99aesproposal:} for AES symmetric key cryptography in particular. 
-
-\subsection{Quality Criteria for Upload/Download Protocol Design}
-We decide on a set of behavioral characteristics for the document upload and download protocols. These characteristics are classified into two groups based on the expectations of the storage integration gateway and that of the user from the protocols. 
-From the gateway's perspective the following characteristics are important:
-\begin{itemize}
-\item Accountability: all actions should be traceable in the blockchain.
-\item Independence to storage system failure: payment is collected only after all interactions with the external storage are done successfully.
-\item Guaranteed Payment: the user can neither fool it to do unnecessary work nor withheld payment after the work is complete.
-\item Fault-tolerance: all local state information should be derivable from the blockchain ledger so that the gateway cannot corrupt any information and can be restarted easily after a failure.  
-\item Security from Malicious Miners: no mining nodes can snatch the payment intended for the gateway. 
-\end{itemize}   
-From the user's perspective, on the other hand, the following characteristics are desired from the protocols:
-\begin{itemize}
-\item Security: no one else can interrupt the storage session intended for the user. 
-\item Payment Security: the user must be able to to get refunds if he/she does not get the proper service. 
-\item Confidentiality: the underlying document cannot be retrieved by others (users or miners) using the audit trail of the protocol execution in the blockchain ledger.
-\end{itemize} 
-Propriety of both groups of behavioral characteristics is self-evident. Hence we do not elaborate on them further. During the protocol description, we discuss how different aspects of the protocols serve to achieve the mentioned characteristics. 
-
-\subsection{Document Upload Protocol Description}
-The document upload protocol is composed of three main phases:
-\begin{enumerate}
-\item Token Deposition: the {\it user} collects a payment token from the {\it gateway} and locks a document upload fee in the blockchain ledger for the {\it gateway} using another token.
-\item Document Upload Processing: the {\it gateway} verifies that payment is locked and adequate then cooperates with the \textit{user} to upload the document in the {\textit external storage}.
-\item Payment Finalization: the User verifies the document upload and unlocks the blockchain payment for the {\it gateway}.
-\end{enumerate}
-Each phase of the protocol involves multiple interaction steps among various system components. Figure 2 presents the sequence diagram of the protocol.
-\tikzset{every picture/.append style={transform shape,scale=.65}}
-\begin{figure}
-  \begin{sequencediagram}
-    \newthread{usr}{\it User}{}
-    \newinst[1]{ac}{ \it Gateway}{}
-    \newinst[1]{bc}{\it Blockchain Network}{}
-    \newinst[1]{es}{\it Document Storage}{}
-
-    \begin{callself}{usr}{\it Generate Document Key $D_k$}{}
-    \end{callself}
-    \begin{call}{usr}{\hspace{0.5cm} \it Get Initial Token}{ac}{\it M}
-        \begin{callself}{ac}{\it Generate token M with generated key $K_1$}{}
-        \end{callself}
-    \end{call}
-    \begin{callself}{usr}{\it Generate $K_2$ and prepare N}{}
-    \end{callself}
-    \begin{call}{usr}{\hspace{1cm} \it Upload Document Info and Lock Fee}{bc}{}
-    \end{call}
-    \begin{call}{usr}{\hspace{0.8cm} \it Upload Document}{ac}{}
-        \begin{call}{ac}{\hspace{2.5cm} \it Verify doc size, fee and token M}{bc}{}
-        \end{call}
-        \begin{call}{ac}{\it Upload document}{es}{\it location Information}
-        \end{call}
-        \begin{call}{ac}{\hspace{2.5cm} \it Store encrypted location information}{bc}{}
-        \end{call}
-    \end{call}
-    \begin{call}{usr}{\hspace{1.5cm} \it Check upload Status}{bc}{}
-    \end{call}
-    \begin{call}{usr}{\it Unlock payment with $K_2$}{bc}{}
-        \begin{call}{bc}{\it Decrypt $N$ with $K_2$, match with M}{bc}{}
-        \end{call}
-    \end{call}
-
-    \begin{call}{usr}{\hspace{0.5cm} \it Finalize upload}{ac}{}
-        \begin{call}{ac}{\hspace{1.5cm} \it Check payment status}{bc}{}
-        \end{call}
-        \begin{call}{ac}{\hspace{1.5cm} \it Withdraw fee with $K_1$}{bc}{}
-        \begin{callself}{bc}{\it Decrypt $M$ with $K_1$, match caller}{}
-        \end{callself}
-        \end{call}
-    \end{call}
-  \end{sequencediagram}
-\caption{Sequence diagram of the document upload protocol}
-\end{figure}
-We now describe these steps as parts of the three protocol phases.
-
-\subsubsection{Token Deposition}
-The {\it user} generates a document key $D_k$ with document information (document name $D_n$, document uploader blockchain address $DU_{addr}$ and document container contract address $DC_{addr}$) to identify the document.
-\begin{equation}
-\label{eq-u-1}
-D_k = hash (D_n, DU_{addr}, DC_{addr}) 
-\end{equation}
-The {\it user} requests the {\it gateway} to generate a token for uploading a document with document size $D_{s}$, document hash $D_{h}$, signature of document hash $DH_{sig}$, $DU_{addr}$ and $D_{k}$. The {\it gateway} validates the input data from the {\it user} and verifies the signature using an already deployed smart contract (responsible to perform sign verification) from the blockchain node it is connected with. The {\it gateway} generates a AES symmetric key $K_{1}$ and encrypts its blockchain address $G_{addr}$ with the generated key and produces an payment token $M$. 
-\begin{equation}
-\label{eq-u-2}
-M = Enc (G_{addr}, K_1)
-\end{equation}
-The {\it gateway} calculates the document upload fee according to the size of the document, stores $K_{1}$ for further use in next upload phase and returns the generated token $M$ and calculated $fee \; amount$ to the User.
-
-Next, the {\it user} generates another secret key $K_2$, encrypts the payment token $M$ with the secret key and produces a upload token $N$.
-\begin{equation}
-\label{eq-u-3}
-N = Enc (M, K_2)
-\end{equation}
-The {\it user} performs a transaction to the blockchain with token $M$ and $N$ and the document information ($D_{n}$, $D_{h}$ and other document meta-data). During this operation, the calculated upload fee to upload the document is also deposited to the blockchain smart contract.
- 
-\subsubsection{Document Upload Processing}
-After successful mining of the earlier transaction, the user sends the document upload request to the {\it gateway} with actual document and its meta-data. The {\it gateway} then retrieves the payment token $M^\prime$ from the blockchain and verifies that it contains the {\it gateway's} address by performing a decryption on token $M^\prime$ with key $K_1$ and checks that if the result is $G_{addr}$. The {\it gateway} also verifies the document size and deposited fee from the blockchain. If all verifications succeed, the {\it gateway} uploads the actual document to an external storage, locally stores the document location information, and stores an encrypted version of the location information in the blockchain. The {\it user} can now verify that the document is successfully uploaded by checking the blockchain. 
-
-\subsubsection{Payment Finalization}
-After a satisfactory verification of the outcome of upload, the user issues an unlock payment transaction with the user secret key $K_2^\prime$ to the blockchain. The blockchain verifies the key by decrypting $N$ with provided $K_2^\prime$ and matches with stored payment token $M$. If the verification succeed, the smart contract unlocks the payment to forward the amount to the receiver address encrypted as payment token $M$.
-\begin{equation}
-\label{eq-u-5}
-M = Dec (N, K_2^\prime)
-\end{equation}
-The user requests the {\it gateway} to finalize the document upload procedure with document information and a signature. The {\it gateway} verifies the signature of the user and checks the payment unlock status from the blockchain. The {\it gateway} issues a transaction to collect the upload payment with its secret key $K_1$. The smart contract decrypts payment token $M$ with $K_1$ and matches the result with the caller address $C_{addr}$. If the address matches with decrypted result, smart contract transfers the payment to the caller  address.
-\begin{equation}
-\label{eq-u-6}
-C_{addr} = Dec (M, K_1)
-\end{equation}
-
-\subsubsection*{Protocol Analysis}
-Since it is cryptographically hard to produce an alternative address and key pair that satisfies Equation \ref{eq-u-6}, only the {\it gateway} can collect the payment. On the other hand, since payment is locked until someone supplies proper $K_2$ in the transaction evaluating Equation \ref{eq-u-5}, which is only known to the {\it user}, the {\it user} ensures that the gateway cannot collect the payment until the {\it user} verifies that the document is successfully uploaded. In addition, since the document's location information in the external storage is recorded by the {\it gateway} in the blockchain in an encrypted form, none but the {\it gateway} can interpret this information for future reference. This simultaneously ensures information security and gateway fault-tolerance. Finally, that user can issue the required transactions into the designated smart contracts indirectly ensures user authentication. 
-
-Note that we did not address the possibility that the upload protocol terminates halfway in the execution for some machine or network failure. This issue can be tackled easily by associating an expiry time with the payment locking transaction. If the protocol fails before the {\it gateway} uploads the document in the external storage system, the user can withdraw the payment after the expiry time. If the failure happens after the document upload in the external storage, then the {\it gateway} can never collect the payment as the user is no longer there to unlock the payment for it. Hence, the {\it gateway} simply removes the document from the external storage in such cases.      
-
-\subsection{Document Download Protocol}
-The document download protocol being illustrated in Figure 3 consists of four phases.
-
-\tikzset{every picture/.append style={transform shape,scale=1}}
-\begin{figure}
-  \label{seq:downloadProtocol}
-   \begin{sequencediagram}
-    \newthread{usr}{\it User}{}
-    \newinst[1.2]{ac}{\it Gateway}{}
-    \newinst[1.1]{bc}{\it Blockchain Network}{}
-    \newinst[1.1]{es}{\it Document Storage}{}
-
-    \begin{call}{usr}{\hspace{0.5cm} \it Get payment token}{ac}{\it  $T_p$, fee amount}
-        \begin{callself}{ac}{\it Prepare $T_p$ with generated key $K_{a}$}{}
-        \end{callself}
-    \end{call}
-    
-    \begin{callself}{usr}{\it Generate $K_c$, $K_u$ and prepare $T_u$}{}
-    \end{callself}
-    \begin{call}{usr}{\it Deposit and lock fee}{bc}{}
-    \end{call}
-    
-    \begin{call}{usr}{\hspace{0.5cm} \it Prepare session}{ac}{\hspace{0.1cm} \it $ENC_s$}
-        \begin{call}{ac}{\hspace{1.5cm}\it Verify sign and payment}{bc}{\it $T_p$}
-        \end{call}
-        \begin{callself}{ac}{\it Verify $T_p$}{}
-        \end{callself}
-        \begin{call}{ac}{\it Generate session}{es}{$S$}
-        \end{call}
-        \begin{callself}{ac}{\it Generate $K_s$ and prepare $ENC_s$} {}
-        \end{callself}
-        \begin{callself}{ac}{\it Prepare Hash $H_s$ of $ENC_s$}{}
-        \end{callself}
-        \begin{call}{ac}{\hspace{0.3cm}\it $H_s$}{bc}{}
-        \end{call}
-    \end{call}
-
-    \begin{call}{usr}{\hspace{1.0cm} \it verify $H_s$ is the hash of $ENC_s$}{bc}{}
-    \end{call}
-    \begin{call}{usr}{\hspace{1.0cm} \it Unlock payment with $K_u$, $D_k$, $U_{addr}$}{bc}{}
-    \end{call}
-    
-    \begin{call}{usr}{\it Get session}{ac}{}
-        \begin{call}{ac}{\hspace{3.0cm} \it Verify signature and payment status}{bc}{}
-        \end{call}
-        \begin{call}{ac}{\hspace{3.2cm} \it Withdraw payment with $K_a$, $ENC_{ks}$}{bc}{}
-        \end{call}
-    \end{call}
-
-    \begin{call}{usr}{\hspace{0.8cm} \it Get encrypted session encryption key }{bc}{$ENC_{ks}$}
-    \end{call}
-    \begin{call}{usr}{\it Dec($ENC_s$, Dec($ENC_{ks}$, $K_c$))}{usr}{\it $S$}
-    \end{call}
-    \begin{call}{usr}{\it Download document}{es}{\it Document}
-    \end{call}
-  \end{sequencediagram}
-\caption{Sequence diagram of the document download protocol}
-\end{figure}
- 
-\begin{enumerate}
-\item Token Deposition: the {\it user} collects a payment token from the {\it gateway} and locks a download fee in the blockchain ledger for the {\it gateway} using another token.
-\item Download Session Creation: the {\it gatewy} generates a download session with the external storage and writes encrypted session information in the blockchain.
-\item Payment Approval: the {\it user} checks information in the  blockchain, unlocks the download payment, and submits a fee transfer request for the {\it gateway}.
-\item Document Download: the {\it user} collects the session encryption key from the {\it gateway}, regenerates the download session, and downloads the document from the external storage directly using that session.  
-\end{enumerate}
-The phases are described in more detail below. 
-
-\subsubsection{Token Deposition}
-The {\it user} requests the {\it gateway} to generate a payment token for downloading a document with the document key $D_k$, document hash $D_h$, {\it user's} blockchain address $U_{addr}$, and signature of document hash $DH_{sig}$. The {\it gateway} receives and validates the input data and verifies the signature $DH_{sig}$ using $D_{h}$ as message. The {\it gateway} then generates a payment secret key $K_a$ and encrypts its blockchain address $G_{addr}$ with the secret key and produces a payment token $T_{p}$. 
-\begin{equation}
-\label{eq-d-1}
-T_p = Enc (AC_{addr}, K_a)
-\end{equation}
-The {\it gateway} also calculates the fee to download the document, stores the secret key $K_a$, and returns the payment token $T_p$ with the calculated download fee to the {\it user}.
-After receiving the payment token, the {\it user} generates two symmetric keys $K_c$ and $K_u$. $K_c$ is the common conversation secret shared only with the {\it gateway}. The {\it user} generates an unlock token $T_u$ by encrypting $T_p$ with the key $K_u$.
-\begin{equation}
-\label{eq-d-2}
-T_u = Enc (T_p, K_u)
-\end{equation}
-The {\it user} then issues a download payment transaction to the blockchain with two tokens $T_p$ and $T_u$, and some document related information that deposits the download fee in the blockchain smart contract.
-
-\subsubsection{Download Session Creation}
-After successful mining of the download payment transaction, the {\it user} issues a prepare download session request to the {\it gateway}. During this request, the {\it user} sends document container contract address $DC_{addr}$, user address $U_{addr}$, document key $D_k$, document hash $D_h$, signed document key $DK_{sig}$, and $K_c$. The {\it gateway} validates the input data and verifies the signature and payment status from the blockchain. If verification successful, the blockchain network returns the payment token $T_p^\prime$ found in the ledger to the {\it gateway}. The {\it gateway} then verifies $T_p^\prime$ by decrypting it with $K_a$ and matching the result with its own blockchain address. 
-\begin{equation}
-\label{eq-d-3}
-G_{addr} = Dec (T_p^\prime, K_a)
-\end{equation}
-After successful address verification, the {\it gateway} retrieves the external storage information for the document and requests the {\it external storage} for a session $S$ to download the document. The {\it gateway} then generates a secret key $K_s$,  encrypts $S$ with $K_s$ and produces an encrypted session $ENC_s$. It also encrypts the document key with the common secret $K_c$ and produces an encrypted document key $ENC_{dk}$. 
-\begin{equation}
-\label{eq-d-4} 
-ENC_s = Enc (S, K_s)
-\end{equation}
-\begin{equation}
-\label{eq-d-5} 
-ENC_{dk} = Enc (D_k, K_c)
-\end{equation}
-The {\it gateway} then prepares a hash, $H_s$, of the encrypted session and issues a transaction to the blockchain with $H_s$. The {\it gateway} locally stores all the input data and returns $ENC_s$ to the user.
-
-\subsubsection{Payment Approval}
-The {\it user} verifies that the hash of $ENC_s$ is indeed stored in the blockchain by the {\it gateway} then issues a transaction to unlock the payment with $K_u$, $D_k$ and $U_{addr}$. The blockchain smart contract unlocks the download fee by decrypting the unlock token $T_u$ with the secret key $K_u$ provided by the {\it user} and matching the result with the payment token $T_p$. 
-\begin{equation}
-\label{eq-d-6} 
-T_p = Dec (T_u, K_u)
-\end{equation}
-The {\it user} then issues a request to the {\it gateway} to get the download session with $D_k$, $DK_{sig}$ and $U_{addr}$. The {\it gateway} verifies the signature and checks payment unlock status from the  blockchain. Then it encrypts the session secret $K_s$ with common conversation secret $K_c$ and produces an encrypted session encryption key $ENC_{ks}$.
-\begin{equation}
-\label{eq-d-7} 
-ENC_{ks} = Enc (K_s, K_c)
-\end{equation}
-The {\it gateway} issues a blockchain transaction to withdraw the payment with the $K_a$ and $ENC_{ks}$. The blockchain smart contract verifies the secret $K_a$ by decrypting the payment token $T_p$ with $K_a$ and matching the result with the caller address. If the decrypted result matches the caller address, blockchain transfers the download payment fee to the caller address. It also stores $ENC_{ks}$ with the download document information and notifies the {\it user}. The {\it user} then collects the encrypted session encryption key $ENC_{ks}$ from the blockchain.
-
-\subsubsection{Document Download}
-The {it user} first decrypts the encrypted session encryption key $ENC_{ks}$ with the common secret $K_c$ and retrieves the session secret key $K_s$, then decrypts the encrypted session $ENC_s$ with $K_s$ to retrieve the original session $S$.
-\begin{equation}
-\label{eq-d-8} 
-K_s = Dec (Enc_{ks}, K_c)
-\end{equation}
-\begin{equation}
-\label{eq-d-9} 
-S = Dec (Enc_s, K_s)
-\end{equation}
-Finally, the {\it user} downloads the document directly from the external storage using the session $S$.
-
-\subsubsection*{Protocol Analysis}
-Payment security for both the {\it user} and the {\it gateway} is ensured similarly in the case of the upload protocol using a pair of encrypted tokens and proper sequencing of the payment related blockchain transactions. As in the case of the upload protocol, all steps of the download protocol are reflected on the blockchain smart contract. This ensures gateway accountability. Further, the {\it gateway} again collects the payment only after completing its interaction with the external storage to protect itself from any blame related to latter's failure. Finally, information related to the storage session  is recorded in the blockchain in encrypted form while the key $K_c$ for decrypting it is shared securely between the {\it user} and the {\it gateway}. Hence none but these two entities can use the session to get access to the underlying document.
-
-One aspect of the download protocol requires particular attention. This is the concern related to unlocking of the download fee by the {\it user} before he/she can verify that the external storage session related information supplied by the {\it gateway} is accurate. Note that since the {\it user} is more likely to fail or be malicious, payment must be unlocked for the {\it gateway} before the {\it user} can decrypt the external storage session related information. However, this ordering opens the possibility that the {\it user} ends up paying for an invalid storage session or dispute its validity when it is actually valid. Therefore, a mechanism is required for automatically resolve any dispute related to external storage session in the blockchain smart contract. This is facilitated by the series of encryption related to the conversation secret $K_c$ and the storage session $S$.
-
-To submit a claim about an invalid session, the {\it user} sends $K_c$ and $ENC_s$ in the blockchain smart contract. That the user has supplied the valid conversation secret is verified by performing the inverse of Equation \ref{eq-d-5} and matching the answer with the document key $D_k$. Since it is the {\it gateway} who did the original transaction, the {\it user} also establishes that the provided $K_c$ value was known to the {\it gateway}. Now the blockchain smart contract itself can compute Equation \ref{eq-d-8} and \ref{eq-d-9} to retrieve the session $S$. It then computes a hash of $S$ and checks if that matches $H_s$ which being stored in the blockchain by the {\it gateway}. If both hashes matches then the {\it user's} session invalidity claim is serious. Then the {\it gateway} maliciousness and external storage  malfunctioning should be investigated. Otherwise, the {\it user's} claim is ignored.          
+\input{updown-proto.tex}
 
 \section{Document Access Permission Control}
 \label{s-accr}
+The upload/download protocols of previous section do not launch until the gateway verifies that the requesting user has the proper permissions for accessing the external storage. There are two facets of the access permission verification problem. First, there must be a generic configuration mechanism for encoding the access control policy for associating and accessing external documents with the blockchain smart contracts of an application. Second, there must be an inviolable mechanism for enforcing the said access control policy in the storage integration gateway. Before we discuss these facets, we share our vision about the organization and relationship of the smart contracts of a blockchain application that set the requirements for document access control policy configuration.
+
+\subsection{Blockchain Application Organization}
+In our modeling, the smart contracts of a blockchain application form one or more rooted relationship hierarchies. The contracts deployed in the blockchain all come from a set of predefined contract templates and each deployed contract bears an application identifier and a type identifier that relate them to the owning application and the type template respectively.
+
+For example, consider a blockchain application for crowd-funded real-estate assets development. The investors will receive ownership rights on parts of the asset. The asset developer will receive the profit for asset development. The actual development work will be conducted through a series of activities assigned to sub-contractors. In addition, some regulatory agency will be tagged with each asset development project by the local branch of the ministry of land for overseeing purposes. Finally, an investor can trade his/her share on the asset for profit. A probable contract template relationship hierarchy for this description can be as illustrated in Figure~\ref{fig-2}:
+\begin{figure}[h]
+\label{fig-2}
+\centering
+\includegraphics[width=0.48\textwidth]{access-req-example}                    
+\caption{An example smart contract relationship hierarchy}
+\end{figure}
+
+Each contract in the hierarchy may have provision for associating external documents with it. Some of these documents will be public, i.e., accessible to any user upon submission of proper payment. For example, any would-be investor should be able to view documents related to project plan, and the profile of the asset developer and the regulatory agency to make an informed investment decision. Hence these documents should be public. Other documents will be protected and only accessible to users who are somehow related to the smart contracts associated with the documents through the rooted contract relationship hierarchy. For example, once a user invests on a project, he/she will own an investment contract. Only then he/she can access the profile related documents of all the sub-contractors who carry the string of of activities for that asset development project and any descriptive documents associated with those activities. However, he/she should not be able to view documents related to the payment negotiated between an assigner of activity and the assignee. Only the involved parties should see these documents. A regulatory agency representative should be able to view all documents associated with the project for proper supervision.    
+
+For associating a document with a smart contract, i.e. document upload, the user must have direct access to the smart contract. For example, only the {\it owner} of an asset developer profile contract should be able to upload profile related documents and link them with his/her contract. He/she should be able to link new documents with a project contract only if he/she is the {\it creator} of the project. Meanwhile, both the {\it assigner} of a development activity and the {\it assignee} can link new documents with the activity. Hence, although in all cases a user must have direct association with the underlying smart contracts, the specific attribute of a contract that relates the user to it naturally varies.   
+
+The expectation is that the access control policy configuration mechanism can encode all the various restrictions for document upload and download. Furthermore, the configuration mechanism must be generic as the storage integration gateway is not application specific and may be catering to the needs of multiple blockchain applications simultaneously. In other words, the gateway should not understand attributes such as {\it owner, creator,} and {assigner}; rather, it should interpret a common format of access control policy configuration and apply any configuration blindly.      
+ 
+\subsection{Access Control Policy Configuration}
+
+\subsection{Access Control Policy Enforcement}       
 
 \section{Storage Integration Gateway Design}
 \label{s-gate}
