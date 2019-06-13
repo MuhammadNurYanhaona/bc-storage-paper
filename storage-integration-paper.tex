@@ -34,6 +34,40 @@
 \usepackage{chngcntr}
 \counterwithin{figure}{section}
 
+% for grammar specification
+\usepackage[perp]{backnaur}
+
+% for listing grammar example
+\usepackage{listings}
+\usepackage{alltt}
+\usepackage{fancyvrb}
+\usepackage{array}
+\usepackage{colortbl}
+\usepackage{ctable}
+\usepackage{booktabs}
+\usepackage{multirow}
+\usepackage{setspace}
+
+\lstdefinelanguage{permgram} {
+                morekeywords={single, array},
+                morekeywords={[2]this, root},
+                morekeywords={[3]accessor, none, substr},
+                sensitive=true,
+                morecomment=[l]{//}
+}
+
+\lstset{language=permgram,
+                basicstyle={\scriptsize\singlespacing},
+                keywordstyle={\footnotesize\itshape\color[rgb]{0.1,0.1,0.5}},
+                keywordstyle=[2]{\footnotesize\itshape\color[rgb]{0.5,0.1,0.1}},
+                keywordstyle=[3]{\footnotesize\itshape},
+                tabsize=2,
+                basewidth=0.48em,
+                commentstyle=\color[rgb]{0.1,0.4,0.1},
+                xleftmargin=0.0cm,
+                captionpos=b
+}
+
 \def\BibTeX{{\rm B\kern-.05em{\sc i\kern-.025em b}\kern-.08em
     T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
 \begin{document}
@@ -78,7 +112,7 @@ The upload/download protocols of previous section do not launch until the gatewa
 \subsection{Blockchain Application Organization}
 In our modeling, the smart contracts of a blockchain application form one or more rooted relationship hierarchies. The contracts deployed in the blockchain all come from a set of predefined contract templates and each deployed contract bears an application identifier and a type identifier that relate them to the owning application and the type template respectively.
 
-For example, consider a blockchain application for crowd-funded real-estate assets development. The investors will receive ownership rights on parts of the asset. The asset developer will receive the profit for asset development. The actual development work will be conducted through a series of activities assigned to sub-contractors. In addition, some regulatory agency will be tagged with each asset development project by the local branch of the ministry of land for overseeing purposes. Finally, an investor can trade his/her share on the asset for profit. A probable contract template relationship hierarchy for this description can be as illustrated in Figure~\ref{fig-2}:
+For example, consider a blockchain application for crowd-funded real-estate assets development. The investors will receive ownership rights on parts of the asset. The asset developer will receive the profit for asset development. The actual development work will be conducted through a series of activities assigned to sub-contractors. In addition, some regulatory agency will be tagged with each asset development project by the local branch of the ministry of land for overseeing purposes. Finally, an investor can trade his/her share on the asset for profit. A probable contract template relationship hierarchy for this description can be as illustrated in Figure~\ref{fig-2}. It is apparent from the description that the root of the relationship in this case is the {\it Project} contract.
 \begin{figure}[h]
 \label{fig-2}
 \centering
@@ -93,6 +127,49 @@ For associating a document with a smart contract, i.e. document upload, the user
 The expectation is that the access control policy configuration mechanism can encode all the various restrictions for document upload and download. Furthermore, the configuration mechanism must be generic as the storage integration gateway is not application specific and may be catering to the needs of multiple blockchain applications simultaneously. In other words, the gateway should not understand attributes such as {\it owner, creator,} and {assigner}; rather, it should interpret a common format of access control policy configuration and apply any configuration blindly.      
  
 \subsection{Access Control Policy Configuration}
+Our solution for generic specification of access control policies of various blockchain applications is to provide a simple language for expressing how a document bearer contract and the users allowed to access the document are related through the root of a contract relationship hierarchy. There are three components of each permission expression that grants a specific kind of users an specific kind of access to a specific document of a specific type of smart contract:
+\begin{enumerate}
+\item Source Linkage: a path description that tells how the root of the contract relationship hierarchy can be reached from the document bearer contract.
+\item Accessor Linkage: another path description that tells how the root of the contract relationship hierarchy can be reached from the contract holding a reference of the user address.
+\item Path Intersection Requirement: a specification that tells to what extend the source and accessor linkages should overlap to grant the user access to the document.     
+\end{enumerate}            
+
+\begin{figure*}[t!]
+\footnotesize
+\begin{bnf*}
+\bnfprod{permission} {\bnfpn{docpermissions} \bnfor \bnfes}\\
+\bnfprod{docpermissions}{\bnfpn{docpermission} \bnfor \bnfpn{docpermission} \bnfsp \bnfts{;} \bnfsp \bnfpn{docpermissions}}\\
+\bnfprod{docpermission}{\bnfpn{doctype} \bnfsp \bnfpn{userpermissions}}\\
+\bnfprod{userpermissions}{\bnfpn{userpermission} \bnfor \bnfpn{userpermission} \bnfsp \bnfts{AND} \bnfsp \bnfpn{userpermissions}}\\
+\bnfprod{userpermission}{\bnfts{[} \bnfsp \bnfpn{permbits} \bnfsp \bnfts{]} \bnfsp \bnfpn{permexpr}}\\
+\bnfprod{permexpr}{\bnfpn{localexpr} \bnfor \bnfpn{remoteexpr}}\\
+\bnfprod{doctype}{\bnfpn{attrname} \bnfsp \bnfts{:} \bnfsp \bnfpn{attrmult} \bnfsp \bnfts{--}}\\
+\bnfprod{permbits}{\bnfts{r-} \bnfor \bnfts{-w} \bnfor \bnfts{rw}}\\
+\bnfprod{localexpr}{\bnfts{(} \bnfsp \bnfpn{attrname} \bnfsp \bnfts{:} \bnfsp \bnfpn{attrmult} \bnfsp \bnfts{)}}\\
+\bnfprod{remoteexpr}{\bnfpn{acclink} \bnfsp \bnfts{/} \bnfsp \bnfpn{srclink} \bnfsp \bnfts{/} \bnfsp \bnfpn{overlap}}\\
+\bnfprod{acclink}{\bnfts{accessor} \bnfsp \bnfts{(} \bnfpn{attrmult} \bnfsp \bnfts{)} \bnfsp \bnfts{[} \bnfpn{pathdirection} \bnfsp \bnfts{]} \bnfsp \bnfts{=} \bnfpn{path} \bnfsp \bnfts{=} \bnfsp \bnfts{root}}\\
+\bnfprod{srclink}{\bnfts{this} \bnfsp \bnfts{=} \bnfsp \bnfpn{path} \bnfsp \bnfts{=} \bnfsp \bnfts{root}}\\
+\bnfprod{overlap}{\bnfts{none} \bnfor \bnfts{substr}}\\
+\bnfprod{pathdirection}{\bnfts{F} \bnfor \bnfts{R}}\\
+\bnfprod{path}{\bnfpn{edge} \bnfor \bnfpn{edge} \bnfsp \bnfts{--} \bnfsp \bnfpn{path}}\\
+\bnfprod{edge}{\bnfpn{linkerprop} \bnfsp \bnfts{:} \bnfsp \bnfpn{contracttype} \bnfsp\bnfpn{occurrences}}\\
+\bnfprod{attrname}{\bnfpn{string}}\\
+\bnfprod{attrmult}{\bnfts{single} \bnfor \bnfts{array}}\\
+\bnfprod{linkerprop}{\bnfpn{string}}\\
+\bnfprod{contracttype}{\bnfpn{string}}\\
+\bnfprod{occurrences}{\bnfes \bnfor \bnfts{*}}
+\end{bnf*}
+\normalsize
+\caption{Permission Expression Grammar}
+\label{grammar}
+\end{figure*}
+
+Figure~\ref{grammar} describes the grammar for permission policy configuration for a document bearer smart contract. The grammar requires that access permissions are specified per document type and individually for each approved user category. For example, assume in the contract relationship hierarchy of Figure~\ref{fig-2}, the {\it investor} of any {\it Investment} contract, the {\it assigner} of an ancestor {\it DevActivity} contract, and any of the {\it representatives} of the {\it RegulatoryAgency} contract can view the {\it license} document of the {\it Subcontractor} contract corresponding to the {\it assignee} of a {\it DevActivity} of the underlying project. Meanwhile, only the {\it owner} of the {Subcontractor} contract can both read and replace (i.e., write) the {\it license} document in the external storage. Then the permission configuration for the {\it license} document should be as described in Listing~\ref{perm-ex}:
+
+\lstset{caption=Example access permission configuration, label=perm-ex}
+\lstinputlisting{permission-example.txt}
+
+All permission expressions related to the documents of a document bearer contract will be static properties of the contract to make them retrievable in the storage integration gateway from the contract template specification. In addition, contracts are required to emit properly formatted events\footnote{An event should contain the addresses of the two contracts whose direct association has been affected by the blockchain transaction, their template type names, and the nature of the update.} on the blockchain audit log in response to blockchain transactions that may affect source or accessor linkages of various documents.
 
 \subsection{Access Control Policy Enforcement}       
 

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.1.24)  10 JUN 2019 18:43
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.1.24)  13 JUN 2019 11:37
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1199,43 +1199,182 @@ File: tikzlibrarytrees.code.tex 2008/02/24 v3.0.1a (rcs-revision 1.2)
 (/usr/share/texlive/texmf-dist/tex/latex/chngcntr/chngcntr.sty
 Package: chngcntr 2009/09/02 v1.0a change counter resetting
 )
+(/usr/share/texlive/texmf-dist/tex/latex/backnaur/backnaur.sty
+Package: backnaur 2012/12/12 1.1 Typesetting for Backus-Naur Form (BNF) definit
+ions
+)
+(/usr/share/texlive/texmf-dist/tex/latex/listings/listings.sty
+\lst@mode=\count170
+\lst@gtempboxa=\box71
+\lst@token=\toks47
+\lst@length=\count171
+\lst@currlwidth=\dimen260
+\lst@column=\count172
+\lst@pos=\count173
+\lst@lostspace=\dimen261
+\lst@width=\dimen262
+\lst@newlines=\count174
+\lst@lineno=\count175
+\lst@maxwidth=\dimen263
+
+(/usr/share/texlive/texmf-dist/tex/latex/listings/lstmisc.sty
+File: lstmisc.sty 2015/06/04 1.6 (Carsten Heinz)
+\c@lstnumber=\count176
+\lst@skipnumbers=\count177
+\lst@framebox=\box72
+)
+(/usr/share/texlive/texmf-dist/tex/latex/listings/listings.cfg
+File: listings.cfg 2015/06/04 1.6 listings configuration
+))
+Package: listings 2015/06/04 1.6 (Carsten Heinz)
+
+(/usr/share/texlive/texmf-dist/tex/latex/base/alltt.sty
+Package: alltt 1997/06/16 v2.0g defines alltt environment
+)
+(/usr/share/texlive/texmf-dist/tex/latex/fancyvrb/fancyvrb.sty
+Package: fancyvrb 2008/02/07
+
+Style option: `fancyvrb' v2.7a, with DG/SPQR fixes, and firstline=lastline fix 
+<2008/02/07> (tvz)
+\FV@CodeLineNo=\count178
+\FV@InFile=\read3
+\FV@TabBox=\box73
+\c@FancyVerbLine=\count179
+\FV@StepNumber=\count180
+\FV@OutFile=\write4
+) (/usr/share/texlive/texmf-dist/tex/latex/tools/array.sty
+Package: array 2016/10/06 v2.4d Tabular extension package (FMi)
+\col@sep=\dimen264
+\extrarowheight=\dimen265
+\NC@list=\toks48
+\extratabsurround=\skip54
+\backup@length=\skip55
+)
+(/usr/share/texlive/texmf-dist/tex/latex/colortbl/colortbl.sty
+Package: colortbl 2012/02/13 v1.0a Color table columns (DPC)
+\everycr=\toks49
+\minrowclearance=\skip56
+)
+(/usr/share/texlive/texmf-dist/tex/latex/ctable/ctable.sty
+Package: ctable 2015/10/17 v1.31 ctable package for flexible typesetting of tab
+le and figure floats using key/value directives
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifpdf.sty
+Package: ifpdf 2017/03/15 v3.2 Provides the ifpdf switch
+)
+(/usr/share/texlive/texmf-dist/tex/latex/etoolbox/etoolbox.sty
+Package: etoolbox 2017/01/02 v2.4 e-TeX tools for LaTeX (JAW)
+\etb@tempcnta=\count181
+)
+(/usr/share/texlive/texmf-dist/tex/latex/tools/tabularx.sty
+Package: tabularx 2016/02/03 v2.11 `tabularx' package (DPC)
+\TX@col@width=\dimen266
+\TX@old@table=\dimen267
+\TX@old@col=\dimen268
+\TX@target=\dimen269
+\TX@delta=\dimen270
+\TX@cols=\count182
+\TX@ftn=\toks50
+)
+(/usr/share/texlive/texmf-dist/tex/latex/booktabs/booktabs.sty
+Package: booktabs 2016/04/27 v1.618033 publication quality tables
+\heavyrulewidth=\dimen271
+\lightrulewidth=\dimen272
+\cmidrulewidth=\dimen273
+\belowrulesep=\dimen274
+\belowbottomsep=\dimen275
+\aboverulesep=\dimen276
+\abovetopsep=\dimen277
+\cmidrulesep=\dimen278
+\cmidrulekern=\dimen279
+\defaultaddspace=\dimen280
+\@cmidla=\count183
+\@cmidlb=\count184
+\@aboverulesep=\dimen281
+\@belowrulesep=\dimen282
+\@thisruleclass=\count185
+\@lastruleclass=\count186
+\@thisrulewidth=\dimen283
+)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/rotating.sty
+Package: rotating 2016/08/11 v2.16d rotated objects in LaTeX
+\c@r@tfl@t=\count187
+\rotFPtop=\skip57
+\rotFPbot=\skip58
+\rot@float@box=\box74
+\rot@mess@toks=\toks51
+)
+
+Package ctable Warning:  Transparency disabled: incompatible with tikz package 
+ on input line 36.
+
+\@CTframesep=\dimen284
+\@dfltCTframesep=\dimen285
+\@CTframerule=\dimen286
+\@dfltCTframerule=\dimen287
+\@CTwidth=\dimen288
+\@dfltCTwidth=\dimen289
+\@CTcaptionskip=\dimen290
+\@dfltCTcaptionskip=\dimen291
+\@CTmaxwidth=\dimen292
+\@dfltCTmaxwidth=\dimen293
+\@CTmincapwidth=\dimen294
+\@dfltCTmincapwidth=\dimen295
+\@CTfooterwidth=\dimen296
+\@dfltCTfooterwidth=\dimen297
+\@CTw=\dimen298
+\@CTfloatwidth=\dimen299
+\@CToldsep=\dimen300
+\@CToldrule=\dimen301
+\CT@t=\box75
+\@CTcurftwidth=\dimen302
+) (/usr/share/texlive/texmf-dist/tex/latex/multirow/multirow.sty
+Package: multirow 2016/11/25 v2.2 Span multiple rows of a table
+\multirow@colwidth=\skip59
+\multirow@cntb=\count188
+\multirow@dima=\skip60
+\bigstrutjot=\dimen303
+)
+(/usr/share/texlive/texmf-dist/tex/latex/setspace/setspace.sty
+Package: setspace 2011/12/19 v6.7a set line spacing
+)
 (./storage-integration-paper.aux)
 \openout1 = `storage-integration-paper.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 39.
-LaTeX Font Info:    ... okay on input line 39.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 39.
-LaTeX Font Info:    ... okay on input line 39.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 39.
-LaTeX Font Info:    ... okay on input line 39.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 39.
-LaTeX Font Info:    ... okay on input line 39.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 39.
-LaTeX Font Info:    ... okay on input line 39.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 39.
-LaTeX Font Info:    ... okay on input line 39.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 39.
-LaTeX Font Info:    Try loading font information for TS1+cmr on input line 39.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 73.
+LaTeX Font Info:    ... okay on input line 73.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 73.
+LaTeX Font Info:    ... okay on input line 73.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 73.
+LaTeX Font Info:    ... okay on input line 73.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 73.
+LaTeX Font Info:    ... okay on input line 73.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 73.
+LaTeX Font Info:    ... okay on input line 73.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 73.
+LaTeX Font Info:    ... okay on input line 73.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 73.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 73.
 
 (/usr/share/texlive/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 39.
+LaTeX Font Info:    ... okay on input line 73.
 
 -- Lines per column: 56 (exact).
 (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count170
-\scratchdimen=\dimen260
-\scratchbox=\box71
-\nofMPsegments=\count171
-\nofMParguments=\count172
-\everyMPshowfont=\toks47
-\MPscratchCnt=\count173
-\MPscratchDim=\dimen261
-\MPnumerator=\count174
-\makeMPintoPDFobject=\count175
-\everyMPtoPDFconversion=\toks48
+\scratchcounter=\count189
+\scratchdimen=\dimen304
+\scratchbox=\box76
+\nofMPsegments=\count190
+\nofMParguments=\count191
+\everyMPshowfont=\toks52
+\MPscratchCnt=\count192
+\MPscratchDim=\dimen305
+\MPnumerator=\count193
+\makeMPintoPDFobject=\count194
+\everyMPtoPDFconversion=\toks53
 ) (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
 
@@ -1272,10 +1411,6 @@ Package etexcmds Info: Could not find \expanded.
 (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
 Package: pdftexcmds 2017/03/19 v0.25 Utility functions of pdfTeX for LuaTeX (HO
 )
-
-(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifpdf.sty
-Package: ifpdf 2017/03/15 v3.2 Provides the ifpdf switch
-)
 Package pdftexcmds Info: LuaTeX not detected.
 Package pdftexcmds Info: \pdf@primitive is available.
 Package pdftexcmds Info: \pdf@ifprimitive is available.
@@ -1292,7 +1427,9 @@ G,.JBIG2,.JB2,.eps]
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-ABD: EveryShipout initializing macros (./intro.tex
+ABD: EveryShipout initializing macros
+\c@lstlisting=\count195
+ (./intro.tex
 Underfull \hbox (badness 3260) in paragraph at lines 7--8
 []\OT1/ptm/m/n/10 The blockchain tech-nol-ogy's de-cen-tral-iza-tion of trust
  []
@@ -1310,12 +1447,12 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 
 ]
 Package epstopdf Info: Source file: <./figures/system-architecture.eps>
-(epstopdf)                    date: 2019-05-17 15:47:44
+(epstopdf)                    date: 2019-06-11 09:20:40
 (epstopdf)                    size: 7195 bytes
 (epstopdf)             Output file: <./figures/system-architecture-eps-converte
 d-to.pdf>
-(epstopdf)                    date: 2019-05-17 15:53:08
-(epstopdf)                    size: 8593 bytes
+(epstopdf)                    date: 2019-06-11 09:20:46
+(epstopdf)                    size: 8576 bytes
 (epstopdf)             Command: <repstopdf --outfile=./figures/system-architect
 ure-eps-converted-to.pdf ./figures/system-architecture.eps>
 (epstopdf)             \includegraphics on input line 25.
@@ -1338,37 +1475,56 @@ Underfull \hbox (badness 4595) in paragraph at lines 33--34
 []\OT1/ptm/m/n/10 A generic doc-u-ment ac-cess con-trol con-fig-u-ra-tion
  []
 
-) (./scope.tex [2 <./figures/system-architecture-eps-converted-to.pdf>])
+) (./scope.tex [2 <./figures/system-architecture-eps-converted-to.pdf>]
+Underfull \vbox (badness 8075) has occurred while \output is active []
+
+)
 (./updown-proto.tex [3]
-\pgf@layerbox@umlsd@background=\box72
-\pgf@layerboxsaved@umlsd@background=\box73
-\pgf@layerbox@umlsd@threadlayer=\box74
-\pgf@layerboxsaved@umlsd@threadlayer=\box75
- [4] [5] [6])
+\pgf@layerbox@umlsd@background=\box77
+\pgf@layerboxsaved@umlsd@background=\box78
+\pgf@layerbox@umlsd@threadlayer=\box79
+\pgf@layerboxsaved@umlsd@threadlayer=\box80
+ [4]
+Underfull \vbox (badness 3333) has occurred while \output is active []
+
+ [5]
+Underfull \vbox (badness 1097) has occurred while \output is active []
+
+ [6])
 Package epstopdf Info: Source file: <./figures/access-req-example.eps>
-(epstopdf)                    date: 2019-06-10 18:30:44
-(epstopdf)                    size: 7062 bytes
+(epstopdf)                    date: 2019-06-13 10:52:18
+(epstopdf)                    size: 7544 bytes
 (epstopdf)             Output file: <./figures/access-req-example-eps-converted
 -to.pdf>
-(epstopdf)                    date: 2019-06-10 18:30:56
-(epstopdf)                    size: 8278 bytes
+(epstopdf)                    date: 2019-06-13 10:52:26
+(epstopdf)                    size: 8669 bytes
 (epstopdf)             Command: <repstopdf --outfile=./figures/access-req-examp
 le-eps-converted-to.pdf ./figures/access-req-example.eps>
-(epstopdf)             \includegraphics on input line 85.
+(epstopdf)             \includegraphics on input line 119.
 Package epstopdf Info: Output file is already uptodate.
-<./figures/access-req-example-eps-converted-to.pdf, id=63, pagebox=cropbox, 470
-.75874pt x 295.1025pt>
+<./figures/access-req-example-eps-converted-to.pdf, id=63, pagebox=cropbox, 454
+.69875pt x 326.21875pt>
 File: ./figures/access-req-example-eps-converted-to.pdf Graphic file (type pdf)
 
 <use ./figures/access-req-example-eps-converted-to.pdf>
 Package pdftex.def Info: ./figures/access-req-example-eps-converted-to.pdf  use
-d on input line 85. on input line 85.
-Package pdftex.def Info: Requested size: 247.6778pt x 155.25983pt on input line
- 85.
+d on input line 119. on input line 119.
+Package pdftex.def Info: Requested size: 247.6778pt x 177.6936pt on input line 
+119.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [7 <./figures/access-req-example-eps-converted-to.pdf>] (./permission-example.
+txt
+LaTeX Font Info:    Try loading font information for TS1+ptm on input line 3.
+
+(/usr/share/texlive/texmf-dist/tex/latex/psnfss/ts1ptm.fd
+File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
+))
 (./storage-integration-paper.bbl
 Underfull \hbox (badness 10000) in paragraph at lines 4--8
 []\OT1/ptm/m/n/8 Break through with blockchain.  $https : / / www2 .
@@ -1381,9 +1537,6 @@ les /
  []
 
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [7 <./figures/access-req-example-eps-converted-to.pdf>]
 Underfull \hbox (badness 6252) in paragraph at lines 91--96
 []\OT1/ptm/m/n/8 viktor tr[]on, aron fis-cher, d[]aniel a. nagy, zsolt felf[]ol
 di, and
@@ -1406,31 +1559,30 @@ Before submitting the final camera ready copy, remember to:
  uses only Type 1 fonts and that every step in the generation
  process uses the appropriate paper size.
 
-[8
-
-] (./storage-integration-paper.aux) ) 
+[8] [9] (./storage-integration-paper.aux) ) 
 Here is how much of TeX's memory you used:
- 16992 strings out of 492990
- 324260 string characters out of 6135005
- 415681 words of memory out of 5000000
- 20136 multiletter control sequences out of 15000+600000
- 41605 words of font info for 86 fonts, out of 8000000 for 9000
+ 19909 strings out of 492990
+ 363754 string characters out of 6135005
+ 462558 words of memory out of 5000000
+ 22991 multiletter control sequences out of 15000+600000
+ 41919 words of font info for 87 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 55i,10n,80p,1288b,1007s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texlive/texmf-dist/fonts/enc/d
-vips/base/8r.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/
-cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.
-pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></u
-sr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share
-/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texliv
-e/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fo
-nts/type1/urw/times/utmbi8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/
-times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.p
-fb>
-Output written on storage-integration-paper.pdf (8 pages, 158831 bytes).
+ 55i,10n,80p,1288b,1239s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/share/texlive/texmf-dist/fonts
+/enc/dvips/base/8r.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/amsfon
+ts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/
+cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.p
+fb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr
+/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/t
+exlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texlive/
+texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-d
+ist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1
+/urw/times/utmbi8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utm
+r8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on storage-integration-paper.pdf (9 pages, 178823 bytes).
 PDF statistics:
- 108 PDF objects out of 1000 (max. 8388607)
- 68 compressed objects within 1 object stream
+ 119 PDF objects out of 1000 (max. 8388607)
+ 76 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  119 words of extra memory for PDF output out of 10000 (max. 10000000)
 
