@@ -21,6 +21,13 @@ Seamless blockchain certification now even easier.
 \newblock \url{https://stamp.io/}.
 \newblock Accessed: 2019-05-24.
 
+\bibitem{Barkley:1997:CSR:266741.266769}
+John Barkley.
+\newblock Comparing simple role based access control models and access control
+  lists.
+\newblock In {\em Proceedings of the Second ACM Workshop on Role-based Access
+  Control}, RBAC '97, pages 127--132, New York, NY, USA, 1997. ACM.
+
 \bibitem{ipfs}
 Juan Benet.
 \newblock Ipfs - content addressed, versioned, p2p file system, 07 2014.
@@ -57,6 +64,12 @@ Petar Maymounkov and David Mazi\`{e}res.
 \newblock In {\em Revised Papers from the First International Workshop on
   Peer-to-Peer Systems}, IPTPS '01, pages 53--65, London, UK, UK, 2002.
   Springer-Verlag.
+
+\bibitem{6233691}
+R.~C. {Merkle}.
+\newblock Protocols for public key cryptosystems.
+\newblock In {\em 1980 IEEE Symposium on Security and Privacy}, pages 122--122,
+  April 1980.
 
 \bibitem{Murty:2008:PAW:1407893}
 James Murty.

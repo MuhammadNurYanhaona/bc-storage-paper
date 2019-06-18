@@ -131,7 +131,7 @@ Our solution for generic specification of access control policies of various blo
 \begin{enumerate}
 \item Source Linkage: a path description that tells how the root of the contract relationship hierarchy can be reached from the document bearer contract.
 \item Accessor Linkage: another path description that tells how the root of the contract relationship hierarchy can be reached from the contract holding a reference of the user address.
-\item Path Intersection Requirement: a specification that tells to what extend the source and accessor linkages should overlap to grant the user access to the document.     
+\item Path Intersection Requirement: a specification that tells to what extent the source and accessor linkages should overlap to grant the user access to the document.     
 \end{enumerate}            
 
 \begin{figure*}[t!]
@@ -169,10 +169,29 @@ Figure~\ref{grammar} describes the grammar for permission policy configuration f
 \lstset{caption=Example access permission configuration, label=perm-ex}
 \lstinputlisting{permission-example.txt}
 
-All permission expressions related to the documents of a document bearer contract will be static properties of the contract to make them retrievable in the storage integration gateway from the contract template specification. In addition, contracts are required to emit properly formatted events\footnote{An event should contain the addresses of the two contracts whose direct association has been affected by the blockchain transaction, their template type names, and the nature of the update.} on the blockchain audit log in response to blockchain transactions that may affect source or accessor linkages of various documents.
+Our strategy for specifying the access permissions using contract relationship path expressions is a middle ground between access control list (ACL) and role based access control (RBAC) that are typically being used in file systems \cite{Barkley:1997:CSR:266741.266769}. Like RBAC, users gain access to resources because they held specific roles, due to their association with specific smart contracts. However, unlike generic roles in RBAC, these roles in our case are indirectly bound to specific resources through some relationship graphs.       
 
-\subsection{Access Control Policy Enforcement}       
+\subsection{Access Control Policy Enforcement}
+A storage integration gateway does not need to understand smart contract relationship hierarchies to enforce access control rules specified in the permission expressions of various smart contracts. It only requires that the blockchain network notifies it whenever a smart contract is deployed. In addition, there are APIs to determine the template type of a deployed smart contract, to retrieve the permission expressions governing access to the documents associated with it, and to access metadata related to documents' locations in the external storage. Finally, contracts are required to emit properly formatted events\footnote{An event should contain the addresses of the two contracts whose direct association has been affected by the blockchain transaction, their template type names, and the nature of the update.} in response to blockchain transactions that may affect source or accessor linkages of various documents.\footnote{If we consider a smart contract relationship hierarchy as a directed graph, all relationships may not be traceable from the leaf to the root of the hierarchy. Some relationships may go backward from the root to the leave. Regardless, the events on the audit log should be formatted to support a uniform traversal strategy from the leave to the root.} All these are simple requirements that are easy to satisfy in any typical blockchain network supporting Ethereum Virtual Machine (EVM) specification for smart contracts \cite{Wood2014EthereumAS}.
 
+The gateway monitors these events and derives a document permission database by combining event data and gateway's path expression related query results. This database is like a dynamic ACL database that is automatically being updated in response to new blockchain events. Figure~\ref{fig:permission-ERD} depicts a high level entity relationship diagram of the gateway's document database.
+\begin{figure}[h]
+\label{fig:permission-ERD}
+\centering
+\includegraphics[width=0.48\textwidth]{permission-db}                    
+\caption{Entity Relationship Diagram of the Access Permission Database}
+\end{figure}
+       
+As new smart contracts are being deployed in the blockchain network, the gateway updates contracts' template related information, if not already known, in local database to determine if a contract of this type can affect any document access permission through some source and accessor linkages. In addition, the gateway determines if this type of contract can be a root of any contract relationship hierarchy. For each contract that is a root of a contract relationship hierarchy, the gateway creates an ACL holding Markle tree (or trie) \cite{6233691} that contains the user addresses that are the endpoints of various accessor linkages originated from the root contract.
+
+If a document is uploaded or an event is published about a change in any property that contributes an edge to the document's paths to various relationship roots, new source linkages are being computed and stored in the database. At the same time, invalidated source linkages are being eliminated. Similarly, if any smart contract property that contributes an edge to users' accessor path to various relationship roots, valid accessor linkages are being recomputed. In addition, the ACL tree entries of the affected users are also being updated.
+
+When a user requests the gateway to undertake an upload/download protocol with the user, the gateway receives the underlying document bearing smart contract's address, the attribute of the smart contract the document refers to, and the user address. Since in case of an upload, the user must be associated with the document bearing smart contract directly, the gateway merely checks the smart contract template description to determine what query to issue in the smart contract to search for the user address. If the requesting user is found registered as a valid uploader then the upload protocol is initiated. Once upload is done, blockchain audit log is traversed to determine new source linkages for that document to existing contract relationship roots. This source linkages are then inserted in the gateway database. If the new document replaces some previously uploaded document then only the location related metadata need to be updated in the gateway database to point to the new document.       
+
+If the user requests for a document download session, the gateway first identifies the ACL trees correspond to smart contract relationship roots reachable by traversing the source linkages of the document. Then it checks if the user's address exists in any of those ACL trees. Then it retrieves all accessor linkages ending at the user address in various ACL trees. Finally, related document source and accessor linkages are compared to decide if they can be combined satisfying any read permission configuration for the document. If any combination attempt succeeds then the user is granted access. If the authorization process fails in any of these steps then the user's request is denied.          
+        
+Note that although both upload and download protocol initialization request authorization involve local database lookups in the external storage integration gateway, the gateway can be arbitrarily replicated and each replica can resume afresh after a database crash because all information in a gateway database is derived from blockchain ledger data, thus easily recoverable.          
+             
 \section{Storage Integration Gateway Design}
 \label{s-gate}
 

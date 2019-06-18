@@ -1,0 +1,47 @@
+Document
+|	location-metadata
+|	holder_contract
+|	contract_template_type
+|
+| one-to-many
+|
+Source_Linkage_List
+|	document_id
+|	linker_path
+|	root_contract_id
+|
+| many-to-many
+|
+Relationship_Root
+|	contract_id
+|	contract_template_type
+|	acl_trie_root_hash
+|
+| one-to-one
+|
+|-------ACL_Trie
+|		user_address
+|		permission_bits_with_ref_count
+| one-to-many
+|
+Accessor_linkage_list
+	root_contract_id
+	linker_path
+	accessor_address
+	
+
+Permission_config
+	contract_template_type
+	document_property
+	permission_exprs
+
+Event_Generator
+	contract_template_type
+	affected_linkage_types
+
+
+
+
+
+
+	

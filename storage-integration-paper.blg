@@ -9,45 +9,45 @@ Warning--to sort, need author or key in googleCloud
 Warning--to sort, need author or key in stampIO
 Warning--empty booktitle in David2014TheRP
 Warning--empty booktitle in Wood2014EthereumAS
-You've used 19 entries,
+You've used 21 entries,
             2118 wiz_defined-function locations,
-            610 strings with 6974 characters,
-and the built_in function-call counts, 5371 in all, are:
-= -- 525
-> -- 213
-< -- 4
-+ -- 87
-- -- 66
-* -- 291
-:= -- 846
-add.period$ -- 59
-call.type$ -- 19
-change.case$ -- 88
+            625 strings with 7337 characters,
+and the built_in function-call counts, 6210 in all, are:
+= -- 617
+> -- 227
+< -- 6
++ -- 93
+- -- 70
+* -- 335
+:= -- 960
+add.period$ -- 66
+call.type$ -- 21
+change.case$ -- 96
 chr.to.int$ -- 0
-cite$ -- 25
-duplicate$ -- 220
-empty$ -- 491
-format.name$ -- 66
-if$ -- 1188
+cite$ -- 27
+duplicate$ -- 266
+empty$ -- 571
+format.name$ -- 70
+if$ -- 1391
 int.to.chr$ -- 0
-int.to.str$ -- 19
-missing$ -- 11
-newline$ -- 96
-num.names$ -- 34
-pop$ -- 151
+int.to.str$ -- 21
+missing$ -- 13
+newline$ -- 106
+num.names$ -- 38
+pop$ -- 162
 preamble$ -- 1
-purify$ -- 69
+purify$ -- 75
 quote$ -- 0
-skip$ -- 172
+skip$ -- 211
 stack$ -- 0
-substring$ -- 230
-swap$ -- 51
-text.length$ -- 4
+substring$ -- 300
+swap$ -- 72
+text.length$ -- 6
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 74
+type$ -- 82
 warning$ -- 6
-while$ -- 45
-width$ -- 21
-write$ -- 199
+while$ -- 54
+width$ -- 23
+write$ -- 224
 (There were 6 warnings)

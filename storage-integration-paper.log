@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.1.24)  13 JUN 2019 11:37
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.1.24)  18 JUN 2019 10:17
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1525,6 +1525,33 @@ LaTeX Font Info:    Try loading font information for TS1+ptm on input line 3.
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ts1ptm.fd
 File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
 ))
+Package epstopdf Info: Source file: <./figures/permission-db.eps>
+(epstopdf)                    date: 2019-06-18 10:03:18
+(epstopdf)                    size: 5326 bytes
+(epstopdf)             Output file: <./figures/permission-db-eps-converted-to.p
+df>
+(epstopdf)                    date: 2019-06-18 10:03:37
+(epstopdf)                    size: 8492 bytes
+(epstopdf)             Command: <repstopdf --outfile=./figures/permission-db-ep
+s-converted-to.pdf ./figures/permission-db.eps>
+(epstopdf)             \includegraphics on input line 181.
+Package epstopdf Info: Output file is already uptodate.
+<./figures/permission-db-eps-converted-to.pdf, id=74, pagebox=cropbox, 482.8037
+6pt x 311.1625pt>
+File: ./figures/permission-db-eps-converted-to.pdf Graphic file (type pdf)
+<use ./figures/permission-db-eps-converted-to.pdf>
+Package pdftex.def Info: ./figures/permission-db-eps-converted-to.pdf  used on 
+input line 181. on input line 181.
+Package pdftex.def Info: Requested size: 247.6778pt x 159.62611pt on input line
+ 181.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[8]
+Underfull \vbox (badness 2781) has occurred while \output is active []
+
+
 (./storage-integration-paper.bbl
 Underfull \hbox (badness 10000) in paragraph at lines 4--8
 []\OT1/ptm/m/n/8 Break through with blockchain.  $https : / / www2 .
@@ -1536,14 +1563,14 @@ Underfull \hbox (badness 10000) in paragraph at lines 4--8
 les /
  []
 
-
-Underfull \hbox (badness 6252) in paragraph at lines 91--96
+[9 <./figures/permission-db-eps-converted-to.pdf>]
+Underfull \hbox (badness 6252) in paragraph at lines 104--109
 []\OT1/ptm/m/n/8 viktor tr[]on, aron fis-cher, d[]aniel a. nagy, zsolt felf[]ol
 di, and
  []
 
 
-Underfull \hbox (badness 7907) in paragraph at lines 91--96
+Underfull \hbox (badness 7907) in paragraph at lines 104--109
 \OT1/ptm/m/n/8 nick john-son.  swap, swear and swin-dle in-cen-tive sys-tem
  []
 
@@ -1559,30 +1586,32 @@ Before submitting the final camera ready copy, remember to:
  uses only Type 1 fonts and that every step in the generation
  process uses the appropriate paper size.
 
-[8] [9] (./storage-integration-paper.aux) ) 
+[10
+
+] (./storage-integration-paper.aux) ) 
 Here is how much of TeX's memory you used:
- 19909 strings out of 492990
- 363754 string characters out of 6135005
- 462558 words of memory out of 5000000
- 22991 multiletter control sequences out of 15000+600000
+ 19917 strings out of 492990
+ 364051 string characters out of 6135005
+ 464582 words of memory out of 5000000
+ 22998 multiletter control sequences out of 15000+600000
  41919 words of font info for 87 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 55i,10n,80p,1288b,1239s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texlive/texmf-dist/fonts
-/enc/dvips/base/8r.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/amsfon
-ts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/
-cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.p
-fb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr
-/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/t
-exlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texlive/
-texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-d
-ist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1
-/urw/times/utmbi8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utm
-r8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on storage-integration-paper.pdf (9 pages, 178823 bytes).
+ 55i,10n,80p,1535b,1239s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/share/texlive/texmf-dist/fonts/enc/d
+vips/base/8r.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/
+cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.
+pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></u
+sr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share
+/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive
+/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-
+dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fo
+nts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/t
+imes/utmbi8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pf
+b></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on storage-integration-paper.pdf (10 pages, 189508 bytes).
 PDF statistics:
- 119 PDF objects out of 1000 (max. 8388607)
- 76 compressed objects within 1 object stream
+ 128 PDF objects out of 1000 (max. 8388607)
+ 82 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 119 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 124 words of extra memory for PDF output out of 10000 (max. 10000000)
 
