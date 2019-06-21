@@ -18,12 +18,11 @@ We believe, to steer blockchain application innovations, blockchain technology s
 
 In our scheme, location, signature, access control configuration, upload/download fees and so on metadata information about a document is stored in some blockchain smart contract. We call this contract the {\it document bearer contract}. A user gets access to the externally stored document by interacting with a \textit{Storage Integration Blockchain Gateway} from a blockchain client application. Any conversation with the gateway involves a series of transactions in the blockchain network for updating the document bearer contract and happens following the instructions of some secure interaction protocol. Finally, if the gateway approves the access request then it generates an access token to the external storage that the user uses to upload/download a document with the external storage directly. In case of a download, in particular, the client application verifies document authenticity by locally computing the document signature and matching it against the signature stored in the blockchain before delivering the document to the user. 
 
-Figure \ref{fig-1} depicts a high-level description of the system architecture of our solution.   
+Figure~\ref{fig-1} depicts a high-level description of the system architecture of our solution.   
 \begin{figure}[h]
-\label{fig-1}
 \centering
 \includegraphics[width=0.48\textwidth]{system-architecture}                    
-\caption{External Storage System Integration Model}
+\caption{External Storage System Integration Model}\label{fig-1}
 \end{figure}
 Observant readers will notice that the \textit{Blockchain Network} and the back-end \textit{Document Storage} of Figure \ref{fig-1} can scale up to meet users' high-availability and other quality of service needs. However, the same cannot be said about the \textit{Gateway}. If proper care is not taken, its failure can make documents unavailable for client access. We avoided this grave potential problem by ensuring that the gateway database only contains information derived from the blockchain network. Hence, the gateway can be limitlessly replicated and the same back-end document storage may be interfaced by many gateways at the same time. Furthermore, we support different gateways to be configured differently to charge users for upload and/or download differently based on their quality of service (QoS) and application requirements.
 

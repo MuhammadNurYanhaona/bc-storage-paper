@@ -27,7 +27,7 @@ The document upload protocol is composed of three main phases:
 \item Document Upload Processing: the {\it gateway} verifies that payment is locked and adequate then cooperates with the \textit{user} to upload the document in the {\textit external storage}.
 \item Payment Finalization: the User verifies the document upload and unlocks the blockchain payment for the {\it gateway}.
 \end{enumerate}
-Each phase of the protocol involves multiple interaction steps among various system components. Figure 2 presents the sequence diagram of the protocol.
+Each phase of the protocol involves multiple interaction steps among various system components. Figure~\ref{fig:up-proto} presents the sequence diagram of the protocol.
 \tikzset{every picture/.append style={transform shape,scale=.65}}
 \begin{figure}
   \begin{sequencediagram}
@@ -70,7 +70,7 @@ Each phase of the protocol involves multiple interaction steps among various sys
         \end{call}
     \end{call}
   \end{sequencediagram}
-\caption{Sequence diagram of the document upload protocol}
+\caption{Sequence diagram of the document upload protocol}\label{fig:up-proto}
 \end{figure}
 We now describe these steps as parts of the three protocol phases.
 
@@ -115,7 +115,7 @@ Since it is cryptographically hard to produce an alternative address and key pai
 Note that we did not address the possibility that the upload protocol terminates halfway in the execution for some machine or network failure. This issue can be tackled easily by associating an expiry time with the payment locking transaction. If the protocol fails before the {\it gateway} uploads the document in the external storage system, the user can withdraw the payment after the expiry time. If the failure happens after the document upload in the external storage, then the {\it gateway} can never collect the payment as the user is no longer there to unlock the payment for it. Hence, the {\it gateway} simply removes the document from the external storage in such cases.      
 
 \subsection{Document Download Protocol}
-The document download protocol being illustrated in Figure 3 consists of four phases.
+The document download protocol being illustrated in Figure~\ref{fig:down-proto} consists of four phases.
 
 \tikzset{every picture/.append style={transform shape,scale=1}}
 \begin{figure}
@@ -170,7 +170,7 @@ The document download protocol being illustrated in Figure 3 consists of four ph
     \begin{call}{usr}{\it Download document}{es}{\it Document}
     \end{call}
   \end{sequencediagram}
-\caption{Sequence diagram of the document download protocol}
+\caption{Sequence diagram of the document download protocol}\label{fig:down-proto}
 \end{figure}
  
 \begin{enumerate}
