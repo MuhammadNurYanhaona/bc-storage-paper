@@ -73,7 +73,7 @@
 \begin{document}
 
 \title{Integrity Management and Access Control of External Storages using Blockchain Technology 
-	\thanks{This research is funded by KONA Software Lab, Limited.}
+	\thanks{This research is funded by KONA Software Lab, Ltd.}
 }
 
 \author{
@@ -111,15 +111,18 @@ peer-to-peer computing, distributed information systems, document handling
        
 \section{Related Work}
 \label{s-rw}
-To the best of our knowledge, alternative solutions for integrating external storage systems with a blockchain network does not exist. So we describe the few blockchain based storage solutions that are published in recent years for the sake of completion.   
+To the best of our knowledge, alternative solutions for integrating external storage systems with a blockchain network do not exist. So we describe the few blockchain based storage solutions that are published in recent years for the sake of completion.   
 
-Swarm: DHT (content addressed chunk store), incentive for serving retrieval request and option for long term commitment whose violation confiscate miner's deposit. The terms and conditions for storage requirement and payment for retrieval is typically handled with blockchain smart contracts. Users ensure persistence by storing replicas and a chunk content hash. No provision for confidentiality from other  users or protection from miner's eavesdropping on document. Owner gets receipts for promises. Contract negotiation done using escrow. A node can request other nodes to store chunks also.
+IPFS \cite{ipfs} is probably the most popular blockchain inspired distributed storage solution. It is basically a distributed hash table (DHT) \cite{Maymounkov:2002:KPI:646334.687801}. The content of each file in IPFS is broken into fixed size blocks and distributed in the network. The hash of a block's content uniquely identify the block in the network. Participant nodes in a IPFS network cache each others data using a Bittorrent \cite{Pouwelse:2005:BPF:2138958.2138984} inspired protocol called BitSwap. In BitSwap, each node has a balance that represents the sum of the ratios of the number of blocks from other nodes it caches compared to the number of its own blocks those other nodes cache. Nodes with large negative balances gradually become isolated in the network by their peers. This encourages a good caching behavior.
 
+Like IPFS, Swarm \cite{swarm} is also a DHT where files are divided into chunks and distributed among the participant nodes in the network. Unlike IPFS, nodes in Swarm receive cryptocurrency payments for serving those chunks to the requester. In addition, a node can make a promise for long term storage of a chunk by issuing a promissory note in the form of a blockchain smart contract. If the node fails to meet its promise, the original owner of the chunk can submit the promissory note as an evidence of misconduct and receive a compensation payment. The integration of payment and penalty in Swarm makes it less likely than in IPFS that nodes will drop chunks.                      
 
+Like Swarm, Storj \cite{Wilkinson14storja} storage network stores files by dividing its content as fixed sized shards and distributing those shards among the network peers. A network peer, called farmer, gains Storj coins by serving those shards on user request. Unlike Swarm, there is no built-in provision for contractual agreement between the file owner and the farmer storing a shard. Instead, the owner does periodic audits of the existence of shards using some file metadata. For safety, the metadata for conducting an audit can be stored in some secondary blockchain. Another major difference from Swarm is that all Storj chunks are encrypted by the owner before he/she send them to the farmers.         
 
-   
+Filecoin \cite{filecoin} seamlessly integrates data storage concerns with blockchain network maintenance by making storing of file content a prerequisite for block mining using a scheme called {\it Proof of Retrievability}. Here again a file is divided into fixed sized pieces and distributed among the network peers. In addition, a blockchain ledger is maintained by the peers that records all transactions regarding store and access requests issued by clients. There is a deterministic algorithm for choosing a small subset of existing pieces from different files whose data is used as the input for the next block mining challenge. Therefore, if a peer stores more file pieces, its chance of success in block mining increases. Consequently, peers are inclined to hoard pieces and serving them.   
 
-Filecoint, swarm, storj, ipfs
+All these blockchain based storage solutions have the common problem that they impose too much responsibility on a file owner for insuring the confidentiality, integrity, and long term availability of his/her file content. In addition, since pieces of a file coming from different parts of the network need to be stitched together before serving, file download latencies can be significant and unpredictable. Finally, since the loss of a single piece corrupts the entire file, all pieces must be stored with the same level of redundancy. That may increase cost of storage significantly.
+
 \input{conclusion.tex}
  
 \bibliographystyle{plain}
