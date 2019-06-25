@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.1.24)  21 JUN 2019 16:42
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.1.24)  25 JUN 2019 14:37
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -892,7 +892,6 @@ Missing character: There is no t in font nullfont!
 Missing character: There is no i in font nullfont!
 Missing character: There is no o in font nullfont!
 Missing character: There is no n in font nullfont!
-Missing character: There is no s in font nullfont!
 Missing character: There is no o in font nullfont!
 Missing character: There is no f in font nullfont!
 Missing character: There is no t in font nullfont!
@@ -1276,6 +1275,9 @@ Missing character: There is no h in font nullfont!
 Missing character: There is no e in font nullfont!
 Missing character: There is no l in font nullfont!
 Missing character: There is no d in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no h in font nullfont!
+Missing character: There is no e in font nullfont!
 Missing character: There is no p in font nullfont!
 Missing character: There is no a in font nullfont!
 Missing character: There is no y in font nullfont!
@@ -1405,26 +1407,28 @@ Missing character: There is no y in font nullfont!
 Missing character: There is no c in font nullfont!
 Missing character: There is no a in font nullfont!
 Missing character: There is no n in font nullfont!
-Missing character: There is no n in font nullfont!
-Missing character: There is no o in font nullfont!
+Missing character: There is no w in font nullfont!
+Missing character: There is no i in font nullfont!
 Missing character: There is no t in font nullfont!
+Missing character: There is no h in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no y in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no a in font nullfont!
 Missing character: There is no c in font nullfont!
 Missing character: There is no o in font nullfont!
 Missing character: There is no r in font nullfont!
 Missing character: There is no r in font nullfont!
 Missing character: There is no u in font nullfont!
 Missing character: There is no p in font nullfont!
-Missing character: There is no t in font nullfont!
-Missing character: There is no a in font nullfont!
-Missing character: There is no n in font nullfont!
-Missing character: There is no y in font nullfont!
-Missing character: There is no i in font nullfont!
-Missing character: There is no n in font nullfont!
-Missing character: There is no f in font nullfont!
-Missing character: There is no o in font nullfont!
-Missing character: There is no r in font nullfont!
-Missing character: There is no m in font nullfont!
-Missing character: There is no a in font nullfont!
 Missing character: There is no t in font nullfont!
 Missing character: There is no i in font nullfont!
 Missing character: There is no o in font nullfont!
@@ -2578,7 +2582,16 @@ Missing character: There is no : in font nullfont!
 Missing character: There is no t in font nullfont!
 Missing character: There is no h in font nullfont!
 Missing character: There is no e in font nullfont!
-Missing character: There is no U in font nullfont!
+! Undefined control sequence.
+l.28 \item Payment Finalization: the {\it
+                                          user} verifies the document upload...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+Missing character: There is no u in font nullfont!
 Missing character: There is no s in font nullfont!
 Missing character: There is no e in font nullfont!
 Missing character: There is no r in font nullfont!
@@ -4355,13 +4368,10 @@ Missing character: There is no m in font nullfont!
 Missing character: There is no e in font nullfont!
 Missing character: There is no n in font nullfont!
 Missing character: There is no t in font nullfont!
-Missing character: There is no c in font nullfont!
-Missing character: There is no o in font nullfont!
-Missing character: There is no n in font nullfont!
-Missing character: There is no t in font nullfont!
+Missing character: There is no b in font nullfont!
+Missing character: There is no e in font nullfont!
 Missing character: There is no a in font nullfont!
-Missing character: There is no i in font nullfont!
-Missing character: There is no n in font nullfont!
+Missing character: There is no r in font nullfont!
 Missing character: There is no e in font nullfont!
 Missing character: There is no r in font nullfont!
 Missing character: There is no c in font nullfont!
@@ -4771,7 +4781,7 @@ Missing character: There is no h in font nullfont!
 Missing character: There is no e in font nullfont!
 ! Undefined control sequence.
 l.83 ...kchain node it is connected with. The {\it
-                                                   gateway} generates a AES ...
+                                                   gateway} generates an AES...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -4795,6 +4805,7 @@ Missing character: There is no t in font nullfont!
 Missing character: There is no e in font nullfont!
 Missing character: There is no s in font nullfont!
 Missing character: There is no a in font nullfont!
+Missing character: There is no n in font nullfont!
 Missing character: There is no A in font nullfont!
 Missing character: There is no E in font nullfont!
 Missing character: There is no S in font nullfont!
@@ -5094,7 +5105,16 @@ Missing character: There is no o in font nullfont!
 Missing character: There is no t in font nullfont!
 Missing character: There is no h in font nullfont!
 Missing character: There is no e in font nullfont!
-Missing character: There is no U in font nullfont!
+! Undefined control sequence.
+l.88 ...and calculated $fee \; amount$ to the {\it
+                                                   user}.
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+Missing character: There is no u in font nullfont!
 Missing character: There is no s in font nullfont!
 Missing character: There is no e in font nullfont!
 Missing character: There is no r in font nullfont!
@@ -5409,25 +5429,6 @@ Missing character: There is no d in font nullfont!
 Missing character: There is no f in font nullfont!
 Missing character: There is no e in font nullfont!
 Missing character: There is no e in font nullfont!
-Missing character: There is no t in font nullfont!
-Missing character: There is no o in font nullfont!
-Missing character: There is no u in font nullfont!
-Missing character: There is no p in font nullfont!
-Missing character: There is no l in font nullfont!
-Missing character: There is no o in font nullfont!
-Missing character: There is no a in font nullfont!
-Missing character: There is no d in font nullfont!
-Missing character: There is no t in font nullfont!
-Missing character: There is no h in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no d in font nullfont!
-Missing character: There is no o in font nullfont!
-Missing character: There is no c in font nullfont!
-Missing character: There is no u in font nullfont!
-Missing character: There is no m in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no n in font nullfont!
-Missing character: There is no t in font nullfont!
 Missing character: There is no i in font nullfont!
 Missing character: There is no s in font nullfont!
 Missing character: There is no a in font nullfont!
@@ -5613,7 +5614,7 @@ Missing character: There is no h in font nullfont!
 Missing character: There is no e in font nullfont!
 ! Undefined control sequence.
 l.98 ...ds the document upload request to the {\it
-                                                   gateway} with actual docu...
+                                                   gateway} with the actual ...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -5631,6 +5632,9 @@ Missing character: There is no w in font nullfont!
 Missing character: There is no i in font nullfont!
 Missing character: There is no t in font nullfont!
 Missing character: There is no h in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no h in font nullfont!
+Missing character: There is no e in font nullfont!
 Missing character: There is no a in font nullfont!
 Missing character: There is no c in font nullfont!
 Missing character: There is no t in font nullfont!
@@ -5952,7 +5956,7 @@ Missing character: There is no h in font nullfont!
 Missing character: There is no e in font nullfont!
 ! Undefined control sequence.
 l.98 ...in. If all verifications succeed, the {\it
-                                                   gateway} uploads the actu...
+                                                   gateway} uploads the docu...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -5976,12 +5980,6 @@ Missing character: There is no s in font nullfont!
 Missing character: There is no t in font nullfont!
 Missing character: There is no h in font nullfont!
 Missing character: There is no e in font nullfont!
-Missing character: There is no a in font nullfont!
-Missing character: There is no c in font nullfont!
-Missing character: There is no t in font nullfont!
-Missing character: There is no u in font nullfont!
-Missing character: There is no a in font nullfont!
-Missing character: There is no l in font nullfont!
 Missing character: There is no d in font nullfont!
 Missing character: There is no o in font nullfont!
 Missing character: There is no c in font nullfont!
@@ -6009,6 +6007,233 @@ Missing character: There is no r in font nullfont!
 Missing character: There is no a in font nullfont!
 Missing character: There is no g in font nullfont!
 Missing character: There is no e in font nullfont!
+! Undefined control sequence.
+\@footnotetext ...tins {\reset@font \footnotesize 
+                                                  \interlinepenalty \interfo...
+l.98 ...e document upload instead of the gateway.}
+                                                  , locally stores the docum...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+\@footnotetext ...}\color@begingroup \@makefntext 
+                                                  {\rule \z@ \footnotesep \i...
+l.98 ...e document upload instead of the gateway.}
+                                                  , locally stores the docum...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Overfull \hbox (6.66669pt too wide) in paragraph at lines 98--98
+[][]\OT1/cmr/m/n/10 If
+ []
+
+
+Overfull \hbox (13.88892pt too wide) in paragraph at lines 98--98
+\OT1/cmr/m/n/10 the
+ []
+
+
+Overfull \hbox (20.08336pt too wide) in paragraph at lines 98--98
+\OT1/cmr/m/n/10 stor-
+ []
+
+
+Overfull \hbox (14.44447pt too wide) in paragraph at lines 98--98
+\OT1/cmr/m/n/10 age
+ []
+
+
+Overfull \hbox (16.50002pt too wide) in paragraph at lines 98--98
+\OT1/cmr/m/n/10 sys-
+ []
+
+
+Overfull \hbox (16.6667pt too wide) in paragraph at lines 98--98
+\OT1/cmr/m/n/10 tem
+ []
+
+
+Overfull \hbox (11.11113pt too wide) in paragraph at lines 98--98
+\OT1/cmr/m/n/10 al-
+ []
+
+
+Overfull \hbox (18.66669pt too wide) in paragraph at lines 98--98
+\OT1/cmr/m/n/10 lows
+ []
+
+
+Overfull \hbox (21.6667pt too wide) in paragraph at lines 98--98
+\OT1/cmr/m/n/10 gate-
+ []
+
+
+Overfull \hbox (16.94447pt too wide) in paragraph at lines 98--98
+\OT1/cmr/m/n/10 way
+ []
+
+
+Overfull \hbox (13.33334pt too wide) in paragraph at lines 98--98
+\OT1/cmr/m/n/10 de-
+ []
+
+
+Overfull \hbox (21.11116pt too wide) in paragraph at lines 98--98
+\OT1/cmr/m/n/10 fined
+ []
+
+
+Overfull \hbox (11.69444pt too wide) in paragraph at lines 98--98
+\OT1/cmr/m/n/10 re-
+ []
+
+
+Overfull \hbox (32.86116pt too wide) in paragraph at lines 98--98
+\OT1/cmr/m/n/10 stricted
+ []
+
+
+Overfull \hbox (14.44447pt too wide) in paragraph at lines 98--98
+\OT1/cmr/m/n/10 up-
+ []
+
+
+Overfull \hbox (18.33339pt too wide) in paragraph at lines 98--98
+\OT1/cmr/m/n/10 load
+ []
+
+
+Overfull \hbox (15.66666pt too wide) in paragraph at lines 98--98
+\OT1/cmr/m/n/10 ses-
+ []
+
+
+Overfull \hbox (21.22226pt too wide) in paragraph at lines 98--98
+\OT1/cmr/m/n/10 sions
+ []
+
+
+Overfull \hbox (8.88892pt too wide) in paragraph at lines 98--98
+\OT1/cmr/m/n/10 to
+ []
+
+
+Overfull \hbox (10.2778pt too wide) in paragraph at lines 98--98
+\OT1/cmr/m/n/10 be
+ []
+
+
+Overfull \hbox (19.50003pt too wide) in paragraph at lines 98--98
+\OT1/cmr/m/n/10 used
+ []
+
+
+Overfull \hbox (10.55559pt too wide) in paragraph at lines 98--98
+\OT1/cmr/m/n/10 by
+ []
+
+
+Overfull \hbox (13.88892pt too wide) in paragraph at lines 98--98
+\OT1/cmr/m/n/10 the
+ []
+
+
+Overfull \hbox (21.80557pt too wide) in paragraph at lines 98--98
+\OT1/cmr/m/n/10 users
+ []
+
+
+Overfull \hbox (19.44449pt too wide) in paragraph at lines 98--98
+\OT1/cmr/m/n/10 then
+ []
+
+
+Overfull \hbox (13.88892pt too wide) in paragraph at lines 98--98
+\OT1/cmr/m/n/10 the
+ []
+
+
+Overfull \hbox (17.86113pt too wide) in paragraph at lines 98--98
+\OT1/cmr/m/n/10 user
+ []
+
+
+Overfull \hbox (15.00003pt too wide) in paragraph at lines 98--98
+\OT1/cmr/m/n/10 can
+ []
+
+
+Overfull \hbox (10.55559pt too wide) in paragraph at lines 98--98
+\OT1/cmr/m/n/10 do
+ []
+
+
+Overfull \hbox (13.88892pt too wide) in paragraph at lines 98--98
+\OT1/cmr/m/n/10 the
+ []
+
+
+Overfull \hbox (18.61115pt too wide) in paragraph at lines 98--98
+\OT1/cmr/m/n/10 doc-
+ []
+
+
+Overfull \hbox (8.8889pt too wide) in paragraph at lines 98--98
+\OT1/cmr/m/n/10 u-
+ []
+
+
+Overfull \hbox (21.94449pt too wide) in paragraph at lines 98--98
+\OT1/cmr/m/n/10 ment
+ []
+
+
+Overfull \hbox (14.44447pt too wide) in paragraph at lines 98--98
+\OT1/cmr/m/n/10 up-
+ []
+
+
+Overfull \hbox (18.33339pt too wide) in paragraph at lines 98--98
+\OT1/cmr/m/n/10 load
+ []
+
+
+Overfull \hbox (11.66669pt too wide) in paragraph at lines 98--98
+\OT1/cmr/m/n/10 in-
+ []
+
+
+Overfull \hbox (22.83337pt too wide) in paragraph at lines 98--98
+\OT1/cmr/m/n/10 stead
+ []
+
+
+Overfull \hbox (8.05559pt too wide) in paragraph at lines 98--98
+\OT1/cmr/m/n/10 of
+ []
+
+
+Overfull \hbox (13.88892pt too wide) in paragraph at lines 98--98
+\OT1/cmr/m/n/10 the
+ []
+
+
+Overfull \hbox (21.6667pt too wide) in paragraph at lines 98--98
+\OT1/cmr/m/n/10 gate-
+ []
+
+
+Overfull \hbox (18.88892pt too wide) in paragraph at lines 98--98
+\OT1/cmr/m/n/10 way.| 
+ []
+
 Missing character: There is no , in font nullfont!
 Missing character: There is no l in font nullfont!
 Missing character: There is no o in font nullfont!
@@ -6233,6 +6458,11 @@ Overfull \hbox (12.97919pt too wide) in paragraph at lines 97--99
 
 Overfull \hbox (24.95413pt too wide) in paragraph at lines 97--99
 \OML/cmm/m/it/10 G[]$
+ []
+
+
+Overfull \hbox (4.48613pt too wide) in paragraph at lines 97--99
+[]
  []
 
 ! Undefined control sequence.
@@ -8633,7 +8863,21 @@ Missing character: There is no g in font nullfont!
 Missing character: There is no u in font nullfont!
 Missing character: There is no r in font nullfont!
 Missing character: There is no e in font nullfont!
-Missing character: There is no 3 in font nullfont!
+! Undefined control sequence.
+<write> ...ence `fig:down-proto' on page \thepage 
+                                                  \space undefined\on@line .
+l.118 ...llustrated in Figure~\ref{fig:down-proto}
+                                                   consists of four phases.
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+LaTeX Warning: Reference `fig:down-proto' on page  undefined on input line 118.
+
+
 Missing character: There is no c in font nullfont!
 Missing character: There is no o in font nullfont!
 Missing character: There is no n in font nullfont!
@@ -8657,6 +8901,11 @@ Missing character: There is no s in font nullfont!
 Missing character: There is no . in font nullfont!
 
 Overfull \hbox (20.0pt too wide) in paragraph at lines 117--119
+[]
+ []
+
+
+Overfull \hbox (10.86105pt too wide) in paragraph at lines 117--119
 []
  []
 
@@ -9177,6 +9426,119 @@ Overfull \hbox (11.07181pt too wide) in paragraph at lines 134--138
 \OML/cmm/m/it/10 T[]$
  []
 
+
+! LaTeX Error: The font size command \normalsize is not defined:
+               there is probably something wrong with the class file.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.138 
+      
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+[1
+! Undefined control sequence.
+<write> \newlabel{s-updown}{{}{\thepage 
+                                        }}
+l.138 
+      
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+\newlabel{s-updown}{{}{}}
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
+! Undefined control sequence.
+<write> \newlabel{fig:up-proto}{{}{\thepage 
+                                            }}
+l.138 
+      
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+\newlabel{fig:up-proto}{{}{}}
+! Undefined control sequence.
+<write> \newlabel{eq-u-1}{{1}{\thepage 
+                                       }}
+l.138 
+      
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+\newlabel{eq-u-1}{{1}{}}
+! Undefined control sequence.
+<write> \newlabel{eq-u-2}{{2}{\thepage 
+                                       }}
+l.138 
+      
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+\newlabel{eq-u-2}{{2}{}}
+! Undefined control sequence.
+<write> \newlabel{eq-u-3}{{3}{\thepage 
+                                       }}
+l.138 
+      
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+\newlabel{eq-u-3}{{3}{}}
+! Undefined control sequence.
+<write> \newlabel{eq-u-5}{{4}{\thepage 
+                                       }}
+l.138 
+      
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+\newlabel{eq-u-5}{{4}{}}
+! Undefined control sequence.
+<write> \newlabel{eq-u-6}{{5}{\thepage 
+                                       }}
+l.138 
+      
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+\newlabel{eq-u-6}{{5}{}}
+! Undefined control sequence.
+<write> ...abel{seq:downloadProtocol}{{}{\thepage 
+                                                  }}
+l.138 
+      
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+\newlabel{seq:downloadProtocol}{{}{}}
+]
 
 ! LaTeX Error: Environment call undefined.
 
@@ -10175,7 +10537,8 @@ Type  H <return>  for immediate help.
  ...                                              
                                                   
 l.173 \caption
-              {Sequence diagram of the document download protocol}
+              {Sequence diagram of the document download protocol}\label{fig...
+
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
@@ -10452,7 +10815,7 @@ Missing character: There is no h in font nullfont!
 Missing character: There is no e in font nullfont!
 ! Undefined control sequence.
 l.178 \item Download Session Creation: the {\it
-                                                gatewy} generates a download...
+                                                gateway} generates a downloa...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -10464,6 +10827,7 @@ Missing character: There is no a in font nullfont!
 Missing character: There is no t in font nullfont!
 Missing character: There is no e in font nullfont!
 Missing character: There is no w in font nullfont!
+Missing character: There is no a in font nullfont!
 Missing character: There is no y in font nullfont!
 Missing character: There is no g in font nullfont!
 Missing character: There is no e in font nullfont!
@@ -12167,7 +12531,7 @@ Missing character: There is no h in font nullfont!
 Missing character: There is no e in font nullfont!
 ! Undefined control sequence.
 l.199 ...t gateway}. During this request, the {\it
-                                                   user} sends document cont...
+                                                   user} sends document bear...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -12191,13 +12555,10 @@ Missing character: There is no m in font nullfont!
 Missing character: There is no e in font nullfont!
 Missing character: There is no n in font nullfont!
 Missing character: There is no t in font nullfont!
-Missing character: There is no c in font nullfont!
-Missing character: There is no o in font nullfont!
-Missing character: There is no n in font nullfont!
-Missing character: There is no t in font nullfont!
+Missing character: There is no b in font nullfont!
+Missing character: There is no e in font nullfont!
 Missing character: There is no a in font nullfont!
-Missing character: There is no i in font nullfont!
-Missing character: There is no n in font nullfont!
+Missing character: There is no r in font nullfont!
 Missing character: There is no e in font nullfont!
 Missing character: There is no r in font nullfont!
 Missing character: There is no c in font nullfont!
@@ -12625,142 +12986,6 @@ Overfull \hbox (13.3307pt too wide) in paragraph at lines 198--200
  []
 
 
-! LaTeX Error: The font size command \normalsize is not defined:
-               there is probably something wrong with the class file.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.200 \begin{equation}
-                      
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-[1
-! Undefined control sequence.
-<write> \newlabel{s-updown}{{}{\thepage 
-                                        }}
-l.200 \begin{equation}
-                      
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-\newlabel{s-updown}{{}{}}
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
-! Undefined control sequence.
-<write> \newlabel{fig:up-proto}{{}{\thepage 
-                                            }}
-l.200 \begin{equation}
-                      
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-\newlabel{fig:up-proto}{{}{}}
-! Undefined control sequence.
-<write> \newlabel{eq-u-1}{{1}{\thepage 
-                                       }}
-l.200 \begin{equation}
-                      
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-\newlabel{eq-u-1}{{1}{}}
-! Undefined control sequence.
-<write> \newlabel{eq-u-2}{{2}{\thepage 
-                                       }}
-l.200 \begin{equation}
-                      
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-\newlabel{eq-u-2}{{2}{}}
-! Undefined control sequence.
-<write> \newlabel{eq-u-3}{{3}{\thepage 
-                                       }}
-l.200 \begin{equation}
-                      
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-\newlabel{eq-u-3}{{3}{}}
-! Undefined control sequence.
-<write> \newlabel{eq-u-5}{{4}{\thepage 
-                                       }}
-l.200 \begin{equation}
-                      
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-\newlabel{eq-u-5}{{4}{}}
-! Undefined control sequence.
-<write> \newlabel{eq-u-6}{{5}{\thepage 
-                                       }}
-l.200 \begin{equation}
-                      
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-\newlabel{eq-u-6}{{5}{}}
-! Undefined control sequence.
-<write> ...abel{seq:downloadProtocol}{{}{\thepage 
-                                                  }}
-l.200 \begin{equation}
-                      
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-\newlabel{seq:downloadProtocol}{{}{}}
-! Undefined control sequence.
-<write> \newlabel{eq-d-1}{{6}{\thepage 
-                                       }}
-l.200 \begin{equation}
-                      
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-\newlabel{eq-d-1}{{6}{}}
-! Undefined control sequence.
-<write> \newlabel{eq-d-2}{{7}{\thepage 
-                                       }}
-l.200 \begin{equation}
-                      
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-\newlabel{eq-d-2}{{7}{}}
-]
 Overfull \hbox (91.84714pt too wide) detected at line 203
 []\OML/cmm/m/it/10 G[] \OT1/cmr/m/n/10 = \OML/cmm/m/it/10 Dec\OT1/cmr/m/n/10 (\
 OML/cmm/m/it/10 T[]; K[]\OT1/cmr/m/n/10 )
@@ -14519,8 +14744,15 @@ Missing character: There is no d in font nullfont!
 Missing character: There is no T in font nullfont!
 Missing character: There is no h in font nullfont!
 Missing character: There is no e in font nullfont!
-Missing character: There is no i in font nullfont!
-Missing character: There is no t in font nullfont!
+! Undefined control sequence.
+l.229 The {\it
+               user} first decrypts the encrypted session encryption key $EN...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
 Missing character: There is no u in font nullfont!
 Missing character: There is no s in font nullfont!
 Missing character: There is no e in font nullfont!
@@ -17221,11 +17453,11 @@ Overfull \hbox (12.58682pt too wide) in paragraph at lines 245--246
 
  
 Here is how much of TeX's memory you used:
- 33 strings out of 492990
- 443 string characters out of 6135005
- 63824 words of memory out of 5000000
- 3687 multiletter control sequences out of 15000+600000
+ 34 strings out of 492990
+ 459 string characters out of 6135005
+ 61824 words of memory out of 5000000
+ 3688 multiletter control sequences out of 15000+600000
  4294 words of font info for 16 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 20i,5n,26p,955b,125s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 20i,5n,26p,1023b,124s stack positions out of 5000i,500n,10000p,200000b,80000s
 !  ==> Fatal error occurred, no output PDF file produced!
