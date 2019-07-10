@@ -1,0 +1,51 @@
+This is BibTeX, Version 0.99d (TeX Live 2017/Debian)
+Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
+The top-level auxiliary file: storage-integration-paper.aux
+The style file: plain.bst
+Database file #1: references.bib.bib
+Warning--to sort, need author or key in deloitte
+Warning--to sort, need author or key in reorg
+Warning--to sort, need author or key in googleCloud
+Warning--empty booktitle in Wood2014EthereumAS
+You've used 19 entries,
+            2118 wiz_defined-function locations,
+            616 strings with 7149 characters,
+and the built_in function-call counts, 5812 in all, are:
+= -- 581
+> -- 219
+< -- 6
++ -- 88
+- -- 68
+* -- 322
+:= -- 903
+add.period$ -- 60
+call.type$ -- 19
+change.case$ -- 89
+chr.to.int$ -- 0
+cite$ -- 23
+duplicate$ -- 246
+empty$ -- 522
+format.name$ -- 68
+if$ -- 1300
+int.to.chr$ -- 0
+int.to.str$ -- 19
+missing$ -- 12
+newline$ -- 96
+num.names$ -- 36
+pop$ -- 143
+preamble$ -- 1
+purify$ -- 70
+quote$ -- 0
+skip$ -- 199
+stack$ -- 0
+substring$ -- 289
+swap$ -- 70
+text.length$ -- 6
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 74
+warning$ -- 4
+while$ -- 52
+width$ -- 21
+write$ -- 206
+(There were 4 warnings)

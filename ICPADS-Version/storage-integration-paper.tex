@@ -1,0 +1,119 @@
+\documentclass[conference]{IEEEtran}
+
+\IEEEoverridecommandlockouts
+% The preceding line is only needed to identify funding in the first footnote. If that is unneeded, please comment it out.
+
+\usepackage{cite, url}
+% Enable the following line if you want highlighted hyperlink to citation and references
+%\usepackage{hyperref}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\graphicspath{ {./figures/} }
+\usepackage{textcomp}
+\usepackage{xcolor}
+
+\usepackage{cases}
+\usepackage{amsthm}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{corollary}{Corollary}[theorem]
+\newtheorem{lemma}[theorem]{Lemma}
+
+% for sequence diagrams and trees
+\usepackage{tikz}
+\usepackage{pgf-umlsd}
+\usepgflibrary{arrows} % for pgf-umlsd
+\usepackage{verbatim}
+\usepackage{float}
+\usepackage[export]{adjustbox}
+\usepackage{multicol, blindtext}
+\usetikzlibrary{trees}
+
+\usepackage{chngcntr}
+\counterwithin{figure}{section}
+
+% for grammar specification
+\usepackage[perp]{backnaur}
+
+% for listing grammar example
+\usepackage{listings}
+\usepackage{alltt}
+\usepackage{fancyvrb}
+\usepackage{array}
+\usepackage{colortbl}
+\usepackage{ctable}
+\usepackage{booktabs}
+\usepackage{multirow}
+\usepackage{setspace}
+
+\lstdefinelanguage{permgram} {
+                morekeywords={single, array},
+                morekeywords={[2]this, root},
+                morekeywords={[3]accessor, none, substr},
+                sensitive=true,
+                morecomment=[l]{//}
+}
+
+\lstset{language=permgram,
+                basicstyle={\scriptsize\singlespacing},
+                keywordstyle={\footnotesize\itshape\color[rgb]{0.1,0.1,0.5}},
+                keywordstyle=[2]{\footnotesize\itshape\color[rgb]{0.5,0.1,0.1}},
+                keywordstyle=[3]{\footnotesize\itshape},
+                tabsize=2,
+                basewidth=0.48em,
+                commentstyle=\color[rgb]{0.1,0.4,0.1},
+                xleftmargin=0.0cm,
+                captionpos=b
+}
+
+\def\BibTeX{{\rm B\kern-.05em{\sc i\kern-.025em b}\kern-.08em
+    T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
+\begin{document}
+
+\title{Integrity Management and Access Control of External Storages using Blockchain Technology 
+	\thanks{This research is funded by KONA Software Lab, Ltd.}
+}
+
+\author{
+	\IEEEauthorblockN{Hasan Mohammad Shahriar}
+	\IEEEauthorblockA{\textit{Research and Development} \\
+	\textit{Kona Software Lab}\\
+		Dhaka, Bangladesh \\
+		h.m.shahriar@konasl.com}
+	\and
+	\IEEEauthorblockN{Muhammad Nur Yanhaona}
+	\IEEEauthorblockA{\textit{Research and Development} \\
+	\textit{Kona Software Lab}\\
+		Dhaka, Bangladesh \\
+		nur.yanhaona@konasl.com}
+}
+\maketitle
+
+\begin{abstract}
+The inherent limitation of blockchain technology for storing bulky and confidential information such as files and images is a major obstacle for the technology's adoption as a platform for real-world applications that would otherwise be greatly benefited from the technology's other offerings. As an alternative, this paper presents a novel solution for reliable and secure integration of external document storage systems such as storage clouds and data centers with a blockchain network. In this approach, each document in the external storage is tagged with some blockchain smart contract. The responsibility of document access control, access fee processing, integrity insurance, and user authentication remains in the hands of the blockchain network and external storage systems focus only on storing and delivering documents efficiently. The solution's reliance on the blockchain technology for various control operations related to document access means greater trust and security for these operations. At the same time, it simplifies external document storage systems' design.    
+\end{abstract}
+
+\begin{IEEEkeywords}
+peer-to-peer computing, distributed information systems, document handling  
+\end{IEEEkeywords}
+
+\input{intro.tex}
+
+\input{scope.tex}
+
+\input{updown-proto.tex}
+
+\input{access-control.tex}
+             
+\input{gateway-design.tex}
+       
+\input{related-work.tex}
+
+\input{conclusion.tex}
+ 
+\bibliographystyle{plain}
+\bibliography{references.bib}
+
+\end{document}
