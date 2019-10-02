@@ -1,0 +1,13 @@
+license:single --
+[r-]: accessor(single)[F] = investor:Investment -- project:Project = root /
+	this = assignee:DevActivity -- parent:DevActivity[*] 
+		-- manager:ActivityManager -- project:Project = root / none	   	
+AND [r-] accessor(array)[R] = representatives:RegulatoryAgency 
+		-- regulator:Project = root /		
+	this = assignee:DevActivity -- parent:DevActivity[*] 
+		-- manager:ActivityManager -- project:Project = root / none
+AND [r-]: accessor(single)[F] = assigner:DevActivity--parent:DevActivity[*]	   	
+		-- manager:ActivityManager -- project:Project = root /	   	
+	this = assignee:DevActivity -- parent:DevActivity[*] 
+		-- manager:ActivityManager -- project:Project = root / substr
+AND [rw]: (owner:single)   	

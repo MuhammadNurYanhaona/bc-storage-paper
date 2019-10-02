@@ -1,0 +1,110 @@
+\begin{thebibliography}{10}
+
+\bibitem{deloitte}
+Break through with blockchain.
+\newblock
+  \url{https://www2.deloitte.com/us/en/pages/financial-services/articles/blockchain-series-deloitte-center-for-financial-services.html}.
+\newblock Accessed: 2019-05-06.
+
+\bibitem{reorg}
+Chain reorganization.
+\newblock \url{https://en.bitcoin.it/wiki/Chain_Reorganization}.
+\newblock Accessed: 2019-02-12.
+
+\bibitem{googleCloud}
+Google cloud storage: Features and benefits.
+\newblock \url{https://cloud.google.com/storage/features/}.
+\newblock Accessed: 2019-05-15.
+
+\bibitem{Barkley:1997:CSR:266741.266769}
+John Barkley.
+\newblock Comparing simple role based access control models and access control
+  lists.
+\newblock In {\em Proceedings of the Second ACM Workshop on Role-based Access
+  Control}, RBAC '97, pages 127--132, New York, NY, USA, 1997. ACM.
+
+\bibitem{ipfs}
+Juan Benet.
+\newblock Ipfs - content addressed, versioned, p2p file system, 07 2014.
+
+\bibitem{Daemen99aesproposal:}
+Joan Daemen and Vincent Rijmen.
+\newblock Aes proposal: Rijndael, 1999.
+
+\bibitem{1455525}
+W.~{Diffie} and M.~E. {Hellman}.
+\newblock Privacy and authentication: An introduction to cryptography.
+\newblock {\em Proceedings of the IEEE}, 67(3):397--427, March 1979.
+
+\bibitem{10.1007/978-3-540-45172-3_4}
+Michael~J. Freedman and David Mazi{\'e}res.
+\newblock Sloppy hashing and self-organizing clusters.
+\newblock In M.~Frans Kaashoek and Ion Stoica, editors, {\em Peer-to-Peer
+  Systems II}, pages 45--55, Berlin, Heidelberg, 2003. Springer Berlin
+  Heidelberg.
+
+\bibitem{filecoin}
+Protocol Labs.
+\newblock Filecoin: A decentralized storage network.
+\newblock \url{https://filecoin.io/filecoin.pdf}, 2017.
+
+\bibitem{Maymounkov:2002:KPI:646334.687801}
+Petar Maymounkov and David Mazi\`{e}res.
+\newblock Kademlia: A peer-to-peer information system based on the xor metric.
+\newblock In {\em Revised Papers from the First International Workshop on
+  Peer-to-Peer Systems}, IPTPS '01, pages 53--65, London, UK, UK, 2002.
+  Springer-Verlag.
+
+\bibitem{6233691}
+R.~C. {Merkle}.
+\newblock Protocols for public key cryptosystems.
+\newblock In {\em 1980 IEEE Symposium on Security and Privacy}, pages 122--122,
+  April 1980.
+
+\bibitem{Murty:2008:PAW:1407893}
+James Murty.
+\newblock {\em Programming Amazon Web Services}.
+\newblock O'Reilly, first edition, 2008.
+
+\bibitem{bitcoin}
+Satoshi Nakamoto.
+\newblock Bitcoin: A peer-to-peer electronic cash system.
+\newblock {\em Cryptography Mailing list at https://metzdowd.com}, 03 2009.
+
+\bibitem{10.1007/978-3-319-56614-6_22}
+Rafael Pass, Lior Seeman, and Abhi Shelat.
+\newblock Analysis of the blockchain protocol in asynchronous networks.
+\newblock In Jean-S{\'e}bastien Coron and Jesper~Buus Nielsen, editors, {\em
+  Advances in Cryptology -- EUROCRYPT 2017}, pages 643--673, Cham, 2017.
+  Springer International Publishing.
+
+\bibitem{Pouwelse:2005:BPF:2138958.2138984}
+Johan Pouwelse, Pawe\l Garbacki, Dick Epema, and Henk Sips.
+\newblock The bittorrent p2p file-sharing system: Measurements and analysis.
+\newblock In {\em Proceedings of the 4th International Conference on
+  Peer-to-Peer Systems}, IPTPS'05, pages 205--216, Berlin, Heidelberg, 2005.
+  Springer-Verlag.
+
+\bibitem{FM548}
+Nick Szabo.
+\newblock Formalizing and securing relationships on public networks.
+\newblock {\em First Monday}, 2(9), 1997.
+
+\bibitem{swarm}
+viktor trón, aron fischer, dániel a.~nagy, zsolt felföldi, and nick johnson.
+\newblock swap, swear and swindle incentive system for swarm.
+\newblock
+  \url{https://swarm-gateways.net/bzz:/theswarm.eth/ethersphere/orange-papers/1},
+  May 2016.
+
+\bibitem{Wilkinson14storja}
+Shawn Wilkinson, Tome Boshevski, Josh Brandoff, and Vitalik Buterin.
+\newblock Storj a peer-to-peer cloud storage network.
+\newblock \url{https://storj.io/storj2014.pdf}, 2014.
+
+\bibitem{Wood2014EthereumAS}
+D.~Wood.
+\newblock Ethereum: a secure decentralised generalised transaction ledger.
+\newblock 2014.
+
+\end{thebibliography}
