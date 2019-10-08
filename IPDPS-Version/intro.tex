@@ -31,11 +31,10 @@ To avoid making the \textit{storage integration gateway} the single point of fai
 The underlying core innovations that make our solution work are as follows:
 \begin{enumerate}
 \item Secure and accountable document upload-download protocols with flexible blockchain based payments.
-\item A generic document access control configuration paradigm using blockchain smart contracts. 
-\item An enforcement mechanism of access control rules in storage integration gateways.
+\item A generic document access control configuration paradigm using blockchain smart contracts and a mechanism to enforce the access rules in storage integration gateways.
 \item Fault-tolerant design of the storage integration gateway against blockchain transaction reversal and back-end storage system failures.   
 \end{enumerate}         
 This paper describes these core innovations and discusses some associated concerns. The rest of the paper is organized as follows:
 
 \subsection{Paper Organization}
-Section \ref{s-scope} discusses our problem model and its ingredients; Section \ref{s-updown} describes document upload/download protocols, analyzes their characteristics, and briefs on alternative payment strategies; Section \ref{s-accr} presents our innovation on blockchain smart contract based document access control policy configuration and its enforcement; Section \ref{s-gate} examines some gateway design concerns, in particular, it explains how to deal with a blockchain ledger reorg \cite{reorg}; Section \ref{s-rw} discusses some related work on blockchain based/inspired document storage; Finally, Section \ref{s-con} concludes the paper.
+Section \ref{s-scope} discusses our problem model and its challenging ingredients; Section \ref{s-updown} describes document upload/download protocols, analyzes their characteristics, and briefs on alternative payment strategies; Section \ref{s-accr} presents our innovation on blockchain smart contract based document access control policy configuration and its enforcement; Section \ref{s-gate} explains gateway's handling of blockchain ledger reorg \cite{reorg}; Section \ref{s-rw} discusses some related work on blockchain based/inspired document storage; Finally, Section \ref{s-con} concludes the paper.
