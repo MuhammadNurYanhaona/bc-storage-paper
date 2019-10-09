@@ -1,4 +1,5 @@
 \section{Handling Blockchain Ledger Reorganization}
+\label{s-gate}
 Without loss of generality, for the discussion of this section, we assume that the storage integration gateway connects with a single peer in the blockchain network.  
 
 When a blockchain ledger reorganization (blockchain reorg in short) replaces the peer's ledger the gateway is connected with, the protocol for blockchain updates ensures that the new ledger the peer has accepted is longer than the old ledger. Now, the new ledger may have all or some the same transactions affecting access control decisions and upload/download protocol executions -- albeit may be in different blocks; or it may have none of those transactions. So the gateway first need to assess to what extent it has been affected by a blockchain reorg then takes necessary corrective actions.
