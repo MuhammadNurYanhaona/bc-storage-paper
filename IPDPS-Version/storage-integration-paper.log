@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.1.24)  9 OCT 2019 11:30
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.1.24)  10 OCT 2019 10:25
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1505,16 +1505,13 @@ Package pdftex.def Info: ./figures/access-req-example-eps-converted-to.pdf  use
 d on input line 11. on input line 11.
 Package pdftex.def Info: Requested size: 247.6778pt x 121.44925pt on input line
  11.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[6] (./permission-example.txt
+ [6 <./figures/access-req-example-eps-converted-to.pdf>]
+(./permission-example.txt
 LaTeX Font Info:    Try loading font information for TS1+ptm on input line 3.
 
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ts1ptm.fd
 File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
-)) [7 <./figures/access-req-example-eps-converted-to.pdf>]
+))
 Package epstopdf Info: Source file: <./figures/permission-db.eps>
 (epstopdf)                    date: 2019-07-10 15:54:50
 (epstopdf)                    size: 5328 bytes
@@ -1526,7 +1523,7 @@ df>
 s-converted-to.pdf ./figures/permission-db.eps>
 (epstopdf)             \includegraphics on input line 67.
 Package epstopdf Info: Output file is already uptodate.
-<./figures/permission-db-eps-converted-to.pdf, id=74, pagebox=cropbox, 485.815p
+<./figures/permission-db-eps-converted-to.pdf, id=70, pagebox=cropbox, 485.815p
 t x 266.9975pt>
 File: ./figures/permission-db-eps-converted-to.pdf Graphic file (type pdf)
 <use ./figures/permission-db-eps-converted-to.pdf>
@@ -1534,9 +1531,8 @@ Package pdftex.def Info: ./figures/permission-db-eps-converted-to.pdf  used on
 input line 67. on input line 67.
 Package pdftex.def Info: Requested size: 247.6778pt x 136.11801pt on input line
  67.
-) (./gateway-design.tex [8 <./figures/permission-db-eps-converted-to.pdf>]) (./
-related-work.tex [9]) (./conclusion.tex)
-(./storage-integration-paper.bbl
+ [7 <./figures/permission-db-eps-converted-to.pdf>]) (./gateway-design.tex [8])
+ (./related-work.tex) (./conclusion.tex [9]) (./storage-integration-paper.bbl
 Underfull \hbox (badness 10000) in paragraph at lines 4--8
 []\OT1/ptm/m/n/8 Break through with blockchain.  $https : / / www2 .
  []
@@ -1572,10 +1568,10 @@ Before submitting the final camera ready copy, remember to:
 
 [10] (./storage-integration-paper.aux) ) 
 Here is how much of TeX's memory you used:
- 19929 strings out of 492990
- 364240 string characters out of 6135005
- 472146 words of memory out of 5000000
- 22998 multiletter control sequences out of 15000+600000
+ 19928 strings out of 492990
+ 364232 string characters out of 6135005
+ 494253 words of memory out of 5000000
+ 22997 multiletter control sequences out of 15000+600000
  41919 words of font info for 87 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  55i,10n,80p,1313b,1239s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1589,7 +1585,7 @@ live/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist
 /fonts/type1/urw/times/utmbi8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/u
 rw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8
 a.pfb>
-Output written on storage-integration-paper.pdf (10 pages, 180912 bytes).
+Output written on storage-integration-paper.pdf (10 pages, 177374 bytes).
 PDF statistics:
  120 PDF objects out of 1000 (max. 8388607)
  76 compressed objects within 1 object stream
